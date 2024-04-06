@@ -22,6 +22,14 @@ export const faqsQuery = groq`*[_type == "faqs"]{
     _id,
     question,
     answer
+
+}`;
+
+export const pageContentQuery = groq`*[_type == "hypnotherapyContent"]{
+    _id,
+    introTitle,
+    mainContent,
+    testimonial
 }`;
 
 export type Benefit = {
@@ -32,18 +40,8 @@ export type Benefit = {
   _rev: string;
 };
 
-export async function getBenefits(client: SanityClient) {
-  const benefitsQuery = groq`*[_type == 'benefits']{
-    _id,
-
+export const benefitsQuery = groq`*[_type == "benefits"]{
     title,
     description,
-    benefitsImage {
-        asset->,
-        _rev,
-        
-        },
-        
-  }`;
-  return await client.fetch<Benefit[]>(benefitsQuery);
-}
+    benefitsImage
+}`;

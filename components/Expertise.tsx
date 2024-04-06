@@ -62,16 +62,14 @@ const ExpertiseComponent = () => {
                 <div
                   key={feature.id}
                   className={`rounded-3xl px-4 transition ${
-                    selected === index
-                      ? 'bg-primary-500/10 dark:bg-primary-400/10'
-                      : ''
+                    selected === index ? 'bg-primary-500/10 ' : ''
                   }`}
                 >
                   <dt
                     className={`border-b text-lg transition ${
                       selected === index || selected === index + 1
                         ? 'border-transparent'
-                        : 'border-primary-900/10 dark:border-primary-300/10'
+                        : 'border-primary-900/10 '
                     }`}
                   >
                     <button
@@ -81,11 +79,11 @@ const ExpertiseComponent = () => {
                       onClick={() => toggle(index)}
                       aria-expanded={selected === index}
                     >
-                      <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
+                      <div className='group-focus-visible:outline-primary-950 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
                         <span className='font-medium'>{feature.name}</span>
                         <span className='ml-6 flex h-7 items-center'>
                           <svg
-                            className={`text-primary-600 dark:text-primary-400 h-6 w-6 transform transition duration-200 ease-in-out ${
+                            className={`text-primary-600  h-6 w-6 transform transition duration-200 ease-in-out ${
                               selected === index ? '-rotate-180' : 'rotate-0'
                             }`}
                             xmlns='http://www.w3.org/2000/svg'
@@ -104,7 +102,7 @@ const ExpertiseComponent = () => {
                     id={feature.id}
                     style={{ display: selected === index ? 'block' : 'none' }}
                   >
-                    <p className='text-primary-950/70 dark:text-primary-200/70 text-base'>
+                    <p className='text-primary-950/70 text-base'>
                       {feature.description}
                     </p>
                   </dd>

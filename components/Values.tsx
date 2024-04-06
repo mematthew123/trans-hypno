@@ -57,7 +57,7 @@ const ValuesComponent = () => {
                 return (
                   <div
                     key={value.ref}
-                    className={`flex flex-col rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10 ${
+                    className={`flex flex-col rounded-3xl bg-primary-500/10 px-6 py-8  ${
                       isLarge
                         ? 'sm:col-span-2 lg:col-span-1 lg:row-span-2'
                         : 'sm:col-span-1'
@@ -66,7 +66,7 @@ const ValuesComponent = () => {
                     <p className='text-sm'>{value.ref}</p>
                     <div className='flex flex-col gap-4'>
                       <h3 className='text-xl font-medium'>{value.name}</h3>
-                      <p className='text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg'>
+                      <p className='text-base text-primary-950/70 sm:text-lg'>
                         {value.description}
                       </p>
                     </div>

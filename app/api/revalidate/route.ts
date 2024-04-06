@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
       return new Response(invalidSlug, { status: 400 });
     }
 
-    const staleRoutes = [`/post/${sanityBody.slug.current}`, '/'];
+    const staleRoutes = ['/'];
 
     await Promise.all(staleRoutes.map((route) => revalidatePath(route)));
 

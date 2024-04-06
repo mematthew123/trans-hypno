@@ -6,10 +6,9 @@ const reviews = [
     title: "Can't say enough good things",
     rating: 5,
     content: `
-      <p>I was really pleased with the overall shopping experience. My order even included a little personal, handwritten note, which delighted me!</p>
-      <p>The product quality is amazing, it looks and feel even better than I had anticipated. Brilliant stuff! I would gladly recommend this store to my friends. And, now that I think of it... I actually have, many times!</p>
+     <p> Stefanie is amazing! She is so knowledgeable and professional. I can't say enough good things about her. I highly recommend her services.</p>
     `,
-    author: 'Risako M',
+    author: 'Jane D',
     date: 'May 16, 2021',
     datetime: '2021-01-06',
   },
@@ -17,23 +16,23 @@ const reviews = [
   // More reviews...
   {
     id: 2,
-    title: 'Excellent customer service',
+    title: 'Amazing experience',
     rating: 5,
     content: `
-      <p>Very happy with the purchase! The product is exactly as described, the shipping was fast, and the communication with seller was great. I will definitely buy again!</p>
+      <p>If you have not yet tried Hypnotherapy with Stefanie, you are missing out! She is amazing and has excellent customer service. I highly recommend her services.</p>
     `,
-    author: 'Risako M',
+    author: 'Mr. Smith',
     date: 'May 16, 2021',
     datetime: '2021-01-06',
   },
   {
     id: 3,
-    title: 'Such an awesome product',
+    title: 'Highly recommend',
     rating: 5,
     content: `
-        <p>Awesome product! I'm very happy with my purchase. It arrived quickly and the seller was professional and courteous.</p>
+        <p>Stefanie is amazing! She is so knowledgeable and professional. I can't say enough good things about her. I highly recommend her services.</p>
         `,
-    author: 'Risako M',
+    author: 'Jane D',
     date: 'May 16, 2021',
     datetime: '2021-01-06',
   },
@@ -47,10 +46,10 @@ export default function ReviewsComponent() {
   return (
     <section className=' py-16 sm:py-20'>
       <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-        <h2 className='text-4xl font-semibold tracking-tight  text-primary-950 dark:text-primary-200 sm:text-5xl lg:text-6xl'>
+        <h2 className='text-4xl font-semibold tracking-tight  text-primary-950  sm:text-5xl lg:text-6xl'>
           Recent reviews
         </h2>
-        <div className='mt-6 space-y-10 divide-y divide-gray-200 border-b border-t dark:border-gray-100 border-gray-200 pb-10'>
+        <div className='mt-6 space-y-10 divide-y divide-gray-200 border-b border-t  border-gray-200 pb-10'>
           {reviews.map((review) => (
             <div
               key={review.id}
@@ -64,39 +63,37 @@ export default function ReviewsComponent() {
                         key={rating}
                         className={classNames(
                           review.rating > rating
-                            ? 'text-yellow-400 dark:text-yellow-100'
-                            : 'text-gray-200 dark:text-yellow-300',
+                            ? 'text-yellow-400'
+                            : 'text-gray-200 ',
                           'h-5 w-5 flex-shrink-0'
                         )}
                         aria-hidden='true'
                       />
                     ))}
                   </div>
-                  <p className='ml-3 text-sm text-gray-700 dark:text-gray-300'>
+                  <p className='ml-3 text-sm text-gray-700 '>
                     {review.rating}
                     <span className='sr-only'> out of 5 stars</span>
                   </p>
                 </div>
 
                 <div className='mt-4 lg:mt-6 xl:col-span-2 xl:mt-0'>
-                  <h3 className='text-xl font-medium text-gray-900 dark:text-gray-200'>
+                  <h3 className='text-xl font-medium text-gray-900 '>
                     {review.title}
                   </h3>
 
                   <div
-                    className='mt-3 space-y-6 text-lg text-gray-500 dark:text-gray-300'
+                    className='mt-3 space-y-6 text-lg text-gray-500 '
                     dangerouslySetInnerHTML={{ __html: review.content }}
                   />
                 </div>
               </div>
 
               <div className='mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3'>
-                <p className='font-medium text-gray-900 dark:text-gray-300'>
-                  {review.author}
-                </p>
+                <p className='font-medium text-gray-900 '>{review.author}</p>
                 <time
                   dateTime={review.datetime}
-                  className='ml-4 border-l border-gray-200 pl-4 text-gray-500 dark:text-gray-200 lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0'
+                  className='ml-4 border-l border-gray-200 pl-4 text-gray-500  lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0'
                 >
                   {review.date}
                 </time>

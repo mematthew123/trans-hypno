@@ -6,16 +6,14 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'questions',
-      title: 'Questions',
-      type: 'array',
-      of: [{ type: 'string' }],
+      name: 'question',
+      title: 'Question',
+      type: 'string',
     }),
     defineField({
-      name: 'answers',
-      title: 'Answers',
-      type: 'array',
-      of: [{ type: 'text' }],
+      name: 'answer',
+      title: 'Answer',
+      type: 'string',
     }),
   ],
 });

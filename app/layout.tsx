@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from './theme-provider';
 import FooterComponent from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import TestNav from '@/components/TestNav';
 
 export const metadata = {
   title: {
@@ -21,13 +22,11 @@ export default function RootLayout({
   return (
     <>
       <html lang='en'>
-        <body className='bg-primary-50 text-primary-950 antialiased transition  dark:bg-primary-950 dark:text-primary-200'>
+        <body className='bg-primary-50 text-primary-950 antialiased transition  '>
           <Analytics />
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-            <HeaderComponent />
-            {children}
-            <FooterComponent />
-          </ThemeProvider>
+          <HeaderComponent />
+          {children}
+          <FooterComponent />
         </body>
       </html>
     </>

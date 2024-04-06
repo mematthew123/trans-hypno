@@ -1,7 +1,14 @@
 import CallToActionComponent from '@/components/Cta';
-import PageContent from '@/components/PageContent';
 import PageHeader from '@/components/PageHeader';
 import React from 'react';
+
+import { pageContentQuery } from '@/sanity/lib/queries';
+import { client } from '@/sanity/lib/client';
+import PageContentComponent from '@/components/PageContent';
+import Quote from '@/components/Quote';
+
+const pageContent = await client.fetch(pageContentQuery);
+console.log(pageContent);
 
 const page = () => {
   return (
@@ -14,7 +21,10 @@ const page = () => {
         image='/trees.jpg'
       />
 
-      <PageContent />
+      {/* Page content from the pageContent query */}
+      <PageContentComponent pageContent={pageContent} />
+      <Quote />
+
       <CallToActionComponent />
     </div>
   );

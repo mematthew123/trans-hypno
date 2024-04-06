@@ -144,7 +144,7 @@ export default function AboutPageContent() {
                 <div className='mt-8 inline-flex rounded-md shadow'>
                   <a
                     href='#'
-                    className='flex items-center justify-center rounded-md border border-transparent  px-5 py-3 text-base font-medium animate-pulse text-white dark:bg-primary-500 bg-primary-600 hover:bg-primary-700'
+                    className='flex items-center justify-center rounded-md border border-transparent  px-5 py-3 text-base font-medium animate-pulse text-white  bg-primary-600 hover:bg-primary-700'
                   >
                     Contact sales
                   </a>

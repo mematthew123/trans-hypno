@@ -85,13 +85,13 @@ export default async function PostsPage() {
                     {post.title}
                   </h2>
                   <div className='space-y-6'>
-                    <p className='text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg'>
+                    <p className='text-base text-primary-950/70  sm:text-lg'>
                       {post.excerpt}
                     </p>
-                    <p className='text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg'>
+                    <p className='text-base text-primary-950/70  sm:text-lg'>
                       {post.publishedAt}
                     </p>
-                    {/* <p className='text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg'>
+                    {/* <p className='text-base text-primary-950/70  sm:text-lg'>
                       {post.slug.current}
                     </p> */}
                     <Image

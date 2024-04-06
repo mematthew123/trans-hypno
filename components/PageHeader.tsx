@@ -12,7 +12,7 @@ export default function PageHeader({ title, description, image }: Props) {
           <img
             src={image}
             alt=''
-            className='absolute rounded-lg opacity-80 inset-0 -z-10 h-full w-full object-cover'
+            className='absolute rounded-lg opacity-90 bg-primary-950/90 inset-0 -z-10 h-full w-full object-cover'
           />
           <div
             className='hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl'
@@ -23,10 +23,10 @@ export default function PageHeader({ title, description, image }: Props) {
             aria-hidden='true'
           ></div>
           <div className='mx-auto max-w-2xl text-center'>
-            <h2 className='text-4xl font-bold tracking-tight text-primary-950 dark:text-primary-200 sm:text-6xl'>
+            <h2 className='text-4xl font-bold tracking-tight text-primary-200 sm:text-6xl'>
               {title}
             </h2>
-            <p className='mt-6 text-lg leading  text-primary-950 dark:text-primary-200'>
+            <p className='mt-6 text-lg leading  text-primary-200'>
               {description}
             </p>
           </div>

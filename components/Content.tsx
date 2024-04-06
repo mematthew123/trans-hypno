@@ -1,20 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { CameraIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
+import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
 
 export default function ContentComponent() {
   return (
     <section className=' py-16 sm:py-20'>
       <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='overflow-hidden '>
-          <div className='relative mx-auto max-w-7xl px-6 py-16 lg:px-8'>
+          <div className='relative mx-auto max-w-7xl py-16'>
             <div className='absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gray-50 lg:block' />
-            <div className='mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8'>
+            <div className=' text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8'>
               <div>
-                <h2 className='text-4xl font-semibold tracking-tight  text-primary-950 dark:text-primary-200 sm:text-5xl lg:text-6xl'>
+                <h2 className='text-4xl font-semibold tracking-tight  text-primary-950  sm:text-5xl lg:text-6xl'>
                   About Us
                 </h2>
-                <h3 className='mt-2 text-xl leading-8 tracking-tight  text-primary-950 dark:text-primary-200 sm:text-3xl'>
+                <h3 className='mt-2 text-xl leading-8 tracking-tight  text-primary-950  sm:text-3xl'>
                   Compassionate Care
                 </h3>
               </div>
@@ -43,7 +45,7 @@ export default function ContentComponent() {
                         y={0}
                         width={4}
                         height={4}
-                        className='text-gray-200 dark:text-gray-800'
+                        className='text-secondary-500'
                         fill='currentColor'
                       />
                     </pattern>
@@ -59,7 +61,7 @@ export default function ContentComponent() {
                     <div className='aspect-h-7 aspect-w-12 lg:aspect-none'>
                       <img
                         className='rounded-lg object-cover object-center shadow-lg'
-                        src='/trees.jpg'
+                        src='/plant.jpg'
                         alt='Auto Mechanic'
                         width={1184}
                         height={1376}
@@ -77,19 +79,24 @@ export default function ContentComponent() {
               </div>
               <div className='mt-8 lg:mt-0'>
                 <div className='mx-auto max-w-prose text-base lg:max-w-none'>
-                  <p className='text-xl '></p>
-                </div>
-                <div className='mx-auto max-w-prose text-base lg:max-w-none'>
                   <p className='text-xl '>
-                    We are a team of experienced professionals who are
-                    passionate about helping our clients achieve their goals.
-                    Whether you want to quit smoking, lose weight, or reduce
-                    stress, we can help you make lasting changes in your life.
-                    Our team is dedicated to providing compassionate care and
-                    personalized support to help you achieve your goals. We
-                    believe that everyone deserves to live a happy, healthy
-                    life, and we are here to help you make that a reality.
+                    We are a team of dedicated professionals who are committed
+                    to providing the best possible care for our patients. Our
+                    compassionate approach to patient care is what sets us apart
+                    from other practices. We believe in treating each patient
+                    with the respect and dignity they deserve, and we work hard
+                    to ensure that every patient receives the highest quality
+                    care possible.
                   </p>
+                  <Link
+                    href='/about'
+                    className='inline-flex text-xl items-center mt-8 text-primary-500 hover:text-primary-600'
+                  >
+                    <p className='inline-flex text-xl items-center mt-8 text-primary-500 hover:text-primary-600'>
+                      Learn more
+                      <ArrowLongRightIcon className='w-10 h-10 ml-2 hover:text-primary-600 hover:w-12 hover:h-12' />
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>

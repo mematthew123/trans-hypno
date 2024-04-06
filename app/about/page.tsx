@@ -11,7 +11,7 @@ import TestStats from '@/components/TestStats';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Based in Missoula, Montana, we specialize in premium web development ensuring your goals are our top priority.',
+    'Providing Hypnotherapy in Missoula, Montana. Learn more about our team and values.',
 };
 
 export default function page() {
@@ -19,10 +19,10 @@ export default function page() {
     <>
       <PageHeader
         title={'About Us'}
-        description={'#1 Auto shop in western Montana'}
+        description={'Hypnotherapy in Missoula, Montana'}
+        image='/flowers.jpg'
       />
 
-      <ValuesComponent />
       <TestStats />
       <TeamComponent />
     </>

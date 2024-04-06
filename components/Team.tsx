@@ -18,13 +18,13 @@ const TeamComponent = () => {
   return (
     <section className='py-16 sm:py-20'>
       <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
-        <h2 className='text-4xl font-semibold tracking-tight text-center text-primary-950 dark:text-primary-200 sm:text-5xl lg:text-6xl'>
+        <h2 className='text-4xl font-semibold tracking-tight text-center text-primary-950  sm:text-5xl lg:text-6xl'>
           Meet Stefanie
         </h2>
         <div className='mt-12'>
           <div
             key={member.name}
-            className='rounded-3xl border border-primary-900/10 px-6 py-8 dark:border-primary-300/10'
+            className='rounded-3xl border border-primary-900/10 px-6 py-8 '
           >
             <div className='space-y-6'>
               <div className='flex justify-center'>
@@ -38,12 +38,8 @@ const TeamComponent = () => {
               </div>
               <div className='text-center'>
                 <h3 className='text-2xl font-medium'>{member.name}</h3>
-                <p className='text-primary-950 dark:text-primary-200 mt-2'>
-                  {member.job}
-                </p>
-                <p className='text-primary-950/70 dark:text-primary-200/70 mt-4'>
-                  {member.desc}
-                </p>
+                <p className='text-primary-950 mt-2'>{member.job}</p>
+                <p className='text-primary-950/70  mt-4'>{member.desc}</p>
               </div>
             </div>
           </div>

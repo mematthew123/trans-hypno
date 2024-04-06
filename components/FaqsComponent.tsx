@@ -13,7 +13,7 @@ export default function FaqsComponents({ faqs }: { faqs: Faq[] }) {
   return (
     <section className='py-16 sm:py-20'>
       <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-        <h2 className='text-4xl font-semibold tracking-tight text-primary-950 dark:text-primary-200 sm:text-5xl lg:text-6xl'>
+        <h2 className='text-4xl font-semibold tracking-tight text-primary-950  sm:text-5xl lg:text-6xl'>
           Frequently Asked Questions
         </h2>
         <dl className='mt-10 space-y-6 divide-y divide-gray-900/10'>

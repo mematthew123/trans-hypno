@@ -45,7 +45,7 @@ const ProjectsComponent = () => {
           <h2 className='mx-auto max-w-xl text-center text-3xl font-medium tracking-tight sm:text-4xl'>
             Recent Projects & Builds
           </h2>
-          <div className='divide-primary-900/10 dark:divide-primary-300/10 grid divide-y lg:grid-cols-2 lg:divide-x lg:divide-y-0'>
+          <div className='divide-primary-900/10 grid divide-y lg:grid-cols-2 lg:divide-x lg:divide-y-0'>
             {projects.map((project) => (
               <figure
                 key={project.name}
@@ -63,11 +63,11 @@ const ProjectsComponent = () => {
                 <figcaption className='flex flex-col gap-4'>
                   <div className='text-center'>
                     <div className='text-base font-medium'>{project.name}</div>
-                    <div className='text-primary-950/70 dark:text-primary-200/70 text-sm'>
+                    <div className='text-primary-950/70 text-sm'>
                       {project.description}
                     </div>
                   </div>
-                  <blockquote className='text-primary-950/70 dark:text-primary-200/70 text-center text-lg italic leading-loose'>
+                  <blockquote className='text-primary-950/70  text-center text-lg italic leading-loose'>
                     <p>{project.message}</p>
                   </blockquote>
                 </figcaption>
