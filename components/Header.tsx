@@ -23,13 +23,8 @@ const links = [
   },
   {
     ref: '04',
-    name: 'Services',
-    href: '/services',
-  },
-  {
-    ref: '04',
-    name: 'Blog',
-    href: '/blog',
+    name: 'Learn',
+    href: '/learn',
   },
 ];
 
@@ -50,7 +45,7 @@ const HeaderComponent = () => {
             href='/'
             className='rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200'
           >
-            <span className='sr-only'>Missoula Auto</span>
+            <span className='sr-only'>Transcend Mind & Body</span>
             <h1 className='text-2xl sm:text-4xl uppercase font-bold text-primary-950 dark:text-primary-200'>
               Logo
             </h1>
@@ -92,14 +87,14 @@ const HeaderComponent = () => {
           <div className='grid grid-cols-1 gap-16 pb-24 pt-6 lg:grid-cols-2 lg:pt-12'>
             <div className='hidden items-center justify-center rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10 lg:flex'>
               <p className='max-w-sm text-xl italic leading-loose text-primary-950/70 dark:text-primary-200/70'>
-                <span className='font-medium'>Missoula Auto</span> is a
-                full-service auto repair shop located in Missoula, Montana. We
-                work on all makes and models, and we specialize in European
-                vehicles. We are committed to providing the highest quality
-                service and repairs at competitive prices.
+                <span className='font-medium'>Transcend Mind & Body</span> is a
+                hypnotherapy practice that specializes in helping clients
+                overcome obstacles and achieve their goals. Whether you want to
+                quit smoking, lose weight, or reduce stress, hypnotherapy can
+                help you make lasting changes in your life.
                 {/* <Cal buttonClass=' flex pt-10 mt-0 w-auto text-7xl text-yellow-500 bg-transparent' /> */}
                 <button className='flex underline animate-pulse underline:blue-200 pt-10 mt-0 w-auto text-2xl text-yellow-500 bg-transparent'>
-                  <a href='tel:+1406204779'>Call to Schedule</a>
+                  <a href='tel:+1406204779'>Book a Session</a>
                 </button>
               </p>
             </div>
@@ -129,7 +124,7 @@ const HeaderComponent = () => {
               ))}
               {/* we are going to make a button for user to click to call us */}
               <button className=' animate-pulse md:hidden flex underline underline:blue-200 pt-10 mt-0 w-auto text-2xl text-yellow-500 bg-transparent'>
-                <a href='tel:+1406204779'>Call to Schedule</a>
+                <a href='tel:+1406204779'>Book a Session</a>
               </button>
             </nav>
           </div>

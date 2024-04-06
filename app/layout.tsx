@@ -7,11 +7,11 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: {
-    template: '%s - Zephyr Pixels: Made in Montana',
-    default: 'Zephyr Pixels - 100% Handcoded Websites and Web Applications',
+    template: '%s - Transcend Mind & Body',
+    default: 'Transcend Mind & Body',
   },
   description:
-    'Located in Missoula Montana - Specializing in web development, marketing, and e-commerce. We build custom websites and applications.',
+    'Hypnotherapy is a powerful tool that can help you overcome obstacles and achieve your goals.',
 };
 export default function RootLayout({
   children,

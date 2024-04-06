@@ -14,7 +14,7 @@ const config: Config = {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffe8d6',
-      primary: colors.zinc,
+      primary: colors.blue,
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],

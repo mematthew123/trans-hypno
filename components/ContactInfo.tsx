@@ -62,7 +62,7 @@ export default function ContactInfoComponent() {
                   href='mailto:hello@zephyrpixels.dev'
                   className='text-2xl font-medium'
                 >
-                  hello@autoshop.com
+                  hello@gmail.com
                 </a>
               </dd>
             </div>

@@ -15,7 +15,7 @@ export default function ContentComponent() {
                   About Us
                 </h2>
                 <h3 className='mt-2 text-xl leading-8 tracking-tight  text-primary-950 dark:text-primary-200 sm:text-3xl'>
-                  Missoula's most trusted auto shop
+                  Compassionate Care
                 </h3>
               </div>
             </div>
@@ -54,12 +54,12 @@ export default function ContentComponent() {
                     fill='url(#de316486-4a29-4312-bdfc-fbce2132a2c1)'
                   />
                 </svg>
-                <div className='relative mx-auto max-w-prose text-base lg:max-w-none'>
+                <div className='relative mx-auto max-w-prose  text-base lg:max-w-none'>
                   <figure>
                     <div className='aspect-h-7 aspect-w-12 lg:aspect-none'>
                       <img
                         className='rounded-lg object-cover object-center shadow-lg'
-                        src='/mechanic.jpg'
+                        src='/trees.jpg'
                         alt='Auto Mechanic'
                         width={1184}
                         height={1376}
@@ -77,34 +77,18 @@ export default function ContentComponent() {
               </div>
               <div className='mt-8 lg:mt-0'>
                 <div className='mx-auto max-w-prose text-base lg:max-w-none'>
-                  <p className='text-xl text-gray-200 dark:text-gray-800'>
-                    Missoula Auto Repair is a locally owned and operated auto
-                    repair shop in Missoula, MT. We are a full service auto
-                    repair shop that specializes in all makes and models of
-                    vehicles. We offer a wide range of services including oil
-                    changes, tire rotations, brake inspections, and more.
-                  </p>
+                  <p className='text-xl '></p>
                 </div>
                 <div className='mx-auto max-w-prose text-base lg:max-w-none'>
-                  <div className='mt-5 prose prose-yellow my-10 py-10 text-gray-500 dark:text-gray-400 prose-2xl mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1'>
-                    <ul role='list text-3xl font-semibold  text-primary-950 dark:text-primary-200 my-20 '>
-                      <li className='list-disc'>Honda</li>
-                      <li className='list-disc'>Toyota</li>
-                      <li className='list-disc'>Ford</li>
-                      <li className='list-disc'>Chevy</li>
-                      <li className='list-disc'>Subaru</li>
-                      <li className='list-disc'>Nissan</li>
-                      <li className='list-disc'>Dodge</li>
-                      <li className='list-disc'>Jeep</li>
-                      <li className='list-disc'>And More!</li>
-                    </ul>
-                  </div>
-                  <p className='text-xl text-gray-200 dark:text-gray-800'>
-                    From small cars to large trucks, we can handle any job. We
-                    offer competitive pricing and fast turnaround times so you
-                    don't have to wait long for your vehicle to be fixed. Our
-                    technicians are ASE certified and have years of experience
-                    in the industry.
+                  <p className='text-xl '>
+                    We are a team of experienced professionals who are
+                    passionate about helping our clients achieve their goals.
+                    Whether you want to quit smoking, lose weight, or reduce
+                    stress, we can help you make lasting changes in your life.
+                    Our team is dedicated to providing compassionate care and
+                    personalized support to help you achieve your goals. We
+                    believe that everyone deserves to live a happy, healthy
+                    life, and we are here to help you make that a reality.
                   </p>
                 </div>
               </div>
