@@ -9,7 +9,7 @@ export default function ContentComponent() {
     <section className=' py-16 sm:py-20'>
       <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='overflow-hidden '>
-          <div className='relative mx-auto max-w-7xl py-16'>
+          <div className='relative mx-auto  py-16'>
             <div className='absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gray-50 lg:block' />
             <div className=' text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8'>
               <div>

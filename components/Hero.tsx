@@ -2,10 +2,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Cal from './Cal';
+import { HeartIcon } from '@heroicons/react/24/outline';
 
 const HeroComponent = () => {
   return (
-    <section className='py-16 h-[100vh] sm:py-20'>
+    <section className=' h-[90vh] '>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col md:flex-row gap-8 md:gap-16 items-center'>
           <div className='flex-1 mb-8 md:mb-0'>
@@ -24,7 +25,7 @@ const HeroComponent = () => {
           </div>
           <div className='flex-1'>
             <img
-              className='inline-block md:h-auto md:object-center md:w-full md:rounded-3xl'
+              className=' md:inline-block md:h-auto md:object-center md:w-full rounded-3xl'
               src='/plant.jpg'
               alt='Auto Shop'
             />

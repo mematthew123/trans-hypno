@@ -27,7 +27,7 @@ function BenefitsComponent() {
 
   return (
     <section className='py-16 mx-auto sm:py-20'>
-      <div className='mx-auto flex justify-center object-center  max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
+      <div className='mx-auto flex justify-center object-center  px-4 py-16  sm:py-24 lg:max-w-7xl '>
         <div className='flex justify-center object-center flex-col gap-12 sm:gap-16'>
           <h2 className='text-4xl font-semibold tracking-tight  text-primary-950  sm:text-5xl lg:text-6xl'>
             Benefits{' '}
@@ -36,7 +36,7 @@ function BenefitsComponent() {
             {benefitsData.map((benefit) => (
               <div
                 key={benefit._id}
-                className='group h-96 w-80 [perspective:1000px]'
+                className='group  h-96 w-96  [perspective:1000px]'
               >
                 <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
                   {/* Front face with image */}
@@ -50,7 +50,7 @@ function BenefitsComponent() {
                         height={320}
                       />
                     )}
-                    <p className='bg-yellow-600 text-2xl'>{benefit.title}</p>
+                    <p className='text-2xl'>{benefit.title}</p>
                   </div>
                   {/* Back face with text */}
                   <div className='absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]'>

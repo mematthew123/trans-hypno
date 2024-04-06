@@ -78,9 +78,7 @@ export default function ReviewsComponent() {
                 </div>
 
                 <div className='mt-4 lg:mt-6 xl:col-span-2 xl:mt-0'>
-                  <h3 className='text-xl font-medium text-gray-900 '>
-                    {review.title}
-                  </h3>
+                  <h3 className='text-xl font-medium  '>{review.title}</h3>
 
                   <div
                     className='mt-3 space-y-6 text-lg text-gray-500 '

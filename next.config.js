@@ -4,7 +4,11 @@ const withMDX = require('@next/mdx')();
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
-    domains: ['localhost', 'cdn.sanity.io'],
+    domains: [
+      'localhost',
+      'cdn.sanity.io',
+      'csimg.nyc3.cdn.digitaloceanspaces.com',
+    ],
   },
   experimental: {
     serverActions: true,
