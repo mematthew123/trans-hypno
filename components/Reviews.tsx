@@ -44,7 +44,7 @@ function classNames(...classes: string[]) {
 
 export default function ReviewsComponent() {
   return (
-    <section className=' py-16 sm:py-20'>
+    <section className=' bg-primary-400/5 py-16 sm:py-20'>
       <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
         <h2 className='text-4xl font-semibold tracking-tight  text-primary-950  sm:text-5xl lg:text-6xl'>
           Recent reviews

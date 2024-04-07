@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const LeftSide = () => {
   return (
-    <section className='py-20'>
+    <section className='py-20 bg-primary-400/5 '>
       <div className='container mx-auto flex flex-col lg:flex-row items-center gap-8 px-4'>
         {/* Image side */}
         <div className=' hidden md:block w-full lg:w-1/2'>
