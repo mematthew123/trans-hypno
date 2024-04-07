@@ -45,3 +45,19 @@ export const benefitsQuery = groq`*[_type == "benefits"]{
     description,
     benefitsImage
 }`;
+
+export type AboutUs = {
+  title: string;
+  subtitle: string;
+  description: PortableTextBlock[];
+  image: ImageAsset;
+  _id: string;
+  _rev: string;
+};
+
+export const aboutUsQuery = groq`*[_type == "aboutUs"]{
+    title,
+    subtitle,
+    description,
+    image
+}`;

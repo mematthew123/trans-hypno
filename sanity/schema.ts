@@ -8,7 +8,8 @@ import benefits from './schemas/benefits';
 import faqs from './schemas/faqs';
 import pageContent from './schemas/pageContent';
 import { testimonial } from './schemas/testimonial';
+import aboutUs from './schemas/aboutUs';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, author, category, blockContent, benefits, faqs, pageContent],
+  types: [blockContent, benefits, faqs, pageContent, aboutUs],
 };
