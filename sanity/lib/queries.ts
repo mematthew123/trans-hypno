@@ -97,3 +97,31 @@ export const reviewsQuery = groq`*[_type == "reviews"]{
     date,
     rating
 }`;
+
+export type Steps = {
+  stepTitle: string;
+  description: PortableTextBlock[];
+  _id: string;
+  _rev: string;
+};
+
+export const stepsQuery = groq`*[_type == "steps"] | order(createdDate desc){
+   stepTitle,
+   description
+}`;
+
+export type Hero = {
+  title: string;
+  content: PortableTextBlock[];
+  image: ImageAsset;
+  _id: string;
+  _rev: string;
+};
+
+export const heroQuery = groq`*[_type == "hero"]{
+    id,
+    title,
+    content,
+    image
+
+}`;
