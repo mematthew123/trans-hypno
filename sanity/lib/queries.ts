@@ -77,3 +77,23 @@ export const educationQuery = groq`*[_type == "education"]{
     description,
     image
 }`;
+
+export type Review = {
+  sectionTitle: string;
+  title: string;
+  review: PortableTextBlock[];
+  author: string;
+  date: any;
+  rating: number;
+  _id: string;
+  _rev: string;
+};
+
+export const reviewsQuery = groq`*[_type == "reviews"]{
+    sectionTitle,
+    title,
+    review,
+    author,
+    date,
+    rating
+}`;
