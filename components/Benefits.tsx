@@ -4,15 +4,10 @@ import React, { useEffect, useState } from 'react';
 import { client } from '../sanity/lib/client';
 import { urlForImage } from '@/sanity/lib/image';
 import { PortableText } from '@portabletext/react';
-
-import { ImageAsset } from '@sanity/types';
 import Image from 'next/image';
 import { Benefit } from '@/sanity/lib/queries';
 import { benefitsQuery } from '@/sanity/lib/queries';
 import { LightBulbIcon } from '@heroicons/react/24/outline';
-import { Rakkas } from 'next/font/google';
-
-const inter = Rakkas({ weight: '400', subsets: ['latin'] });
 
 function BenefitsComponent() {
   const [benefitsData, setBenefitsData] = useState<Benefit[]>([]);

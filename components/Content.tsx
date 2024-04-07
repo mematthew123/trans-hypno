@@ -3,8 +3,13 @@
 import { CameraIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
+import { AboutUsPage, aboutUsPageQuery } from '@/sanity/lib/queries';
+import { client } from '@/sanity/lib/client';
+import { PortableText } from '@portabletext/react';
 
-export default function ContentComponent() {
+export default async function ContentComponent() {
+  const data = await client.fetch(aboutUsPageQuery);
+  const aboutUsPage = data[0] as AboutUsPage;
   return (
     <section className=' py-16 sm:py-20'>
       <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
@@ -14,10 +19,10 @@ export default function ContentComponent() {
             <div className=' text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8'>
               <div>
                 <h2 className='text-4xl font-semibold tracking-tight  text-primary-950  sm:text-5xl lg:text-6xl'>
-                  About Us
+                  {aboutUsPage.title}
                 </h2>
                 <h3 className='mt-2 text-xl leading-8 tracking-tight  text-primary-950  sm:text-3xl'>
-                  Compassionate Care
+                  {aboutUsPage.subtitle}
                 </h3>
               </div>
             </div>
@@ -79,22 +84,15 @@ export default function ContentComponent() {
               </div>
               <div className='mt-8 lg:mt-0'>
                 <div className='mx-auto max-w-prose text-base lg:max-w-none'>
-                  <p className='text-xl '>
-                    We are a team of dedicated professionals who are committed
-                    to providing the best possible care for our patients. Our
-                    compassionate approach to patient care is what sets us apart
-                    from other practices. We believe in treating each patient
-                    with the respect and dignity they deserve, and we work hard
-                    to ensure that every patient receives the highest quality
-                    care possible.
-                  </p>
+                  <div className='text-xl '>
+                    <PortableText value={aboutUsPage.content} />
+                  </div>
                   <Link
-                    href='/about'
+                    href='/contact'
                     className='inline-flex text-xl items-center mt-8 text-primary-500 hover:text-primary-600'
                   >
                     <p className='inline-flex text-xl items-center mt-8 text-primary-500 hover:text-primary-600'>
-                      Learn more
-                      <ArrowLongRightIcon className='w-10 h-10 ml-2 hover:text-primary-600 hover:w-12 hover:h-12' />
+                      Get in Touch
                     </p>
                   </Link>
                 </div>

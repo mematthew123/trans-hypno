@@ -8,6 +8,7 @@ import PageHeader from '@/components/PageHeader';
 import AboutPageContent from '@/components/AboutPageContent';
 import TestStats from '@/components/TestStats';
 import CallToActionComponent from '@/components/Cta';
+import ContentComponent from '@/components/Content';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -24,7 +25,7 @@ export default function page() {
         image='/flowers.jpg'
       />
 
-      <TestStats />
+      <ContentComponent />
       {/* <TeamComponent /> */}
       <CallToActionComponent />
     </>

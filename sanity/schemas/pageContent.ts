@@ -13,7 +13,7 @@ export default defineType({
 
     defineField({
       name: 'mainContent',
-      title: 'Main Content',
+      title: 'Content',
       type: 'blockContent',
     }),
 

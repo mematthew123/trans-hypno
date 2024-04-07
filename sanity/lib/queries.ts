@@ -25,11 +25,21 @@ export const faqsQuery = groq`*[_type == "faqs"]{
 
 }`;
 
+export type PageContent = {
+  introTitle: string;
+  mainContent: PortableTextBlock[];
+  testimonial: string;
+  _id: string;
+  _rev: string;
+};
+
 export const pageContentQuery = groq`*[_type == "hypnotherapyContent"]{
+
     _id,
     introTitle,
     mainContent,
     testimonial
+
 }`;
 
 export type Benefit = {
@@ -124,4 +134,22 @@ export const heroQuery = groq`*[_type == "hero"]{
     content,
     image
 
+}`;
+
+export type AboutUsPage = {
+  title: string;
+  subtitle: string;
+  content: PortableTextBlock[];
+  image: ImageAsset;
+  _id: string;
+  _rev: string;
+};
+
+export const aboutUsPageQuery = groq`*[_type == "aboutUsPage"]{
+    title,
+    subtitle,
+   content,
+    image,
+    _id,
+    _rev
 }`;

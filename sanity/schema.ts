@@ -9,6 +9,7 @@ import education from './schemas/education';
 import reviews from './schemas/reviews';
 import steps from './schemas/steps';
 import hero from './schemas/hero';
+import aboutUsPage from './schemas/aboutUsPage';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -21,5 +22,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     education,
     reviews,
     steps,
+    aboutUsPage,
   ],
 };
