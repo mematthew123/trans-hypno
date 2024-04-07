@@ -61,3 +61,19 @@ export const aboutUsQuery = groq`*[_type == "aboutUs"]{
     description,
     image
 }`;
+
+export type Education = {
+  title: string;
+  subtitle: string;
+  description: PortableTextBlock[];
+  image: ImageAsset;
+  _id: string;
+  _rev: string;
+};
+
+export const educationQuery = groq`*[_type == "education"]{
+    title,
+    subtitle,
+    description,
+    image
+}`;
