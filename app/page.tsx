@@ -12,11 +12,10 @@ import { client } from '@/sanity/lib/client';
 import { faqsQuery } from '@/sanity/lib/queries';
 import { pageContentQuery } from '@/sanity/lib/queries';
 
-const faqs = await client.fetch(faqsQuery);
-console.log(faqs);
-const pageContent = await client.fetch(pageContentQuery);
+export default async function Page() {
+  const faqs = await client.fetch(faqsQuery);
+  console.log(faqs);
 
-export default function Home() {
   return (
     <>
       <HeroComponent />

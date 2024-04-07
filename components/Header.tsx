@@ -34,11 +34,9 @@ const HeaderComponent = () => {
 
   return (
     <header
-      className={`transition ${
-        open ? 'bg-primary-500/10 ' : 'bg-primary-50 0'
-      }`}
+      className={`transition ${open ? 'bg-primary-500/10 ' : 'bg-primary-50 '}`}
     >
-      <div className='mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8'>
+      <div className='mx-auto flex max-w-2xl items-center justify-between px-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8'>
         <div className='flex'>
           <a
             href='/'
@@ -48,8 +46,9 @@ const HeaderComponent = () => {
             <Image
               src='/logo_no-bg.png'
               alt='Transcend Mind & Body'
-              width={100}
-              height={100}
+              width={80}
+              height={50}
+              className='w-auto h-12 md:h-14 lg:h-16 xl:h-20 2xl:h-24'
             />
           </a>
         </div>
