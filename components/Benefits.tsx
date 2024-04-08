@@ -28,7 +28,7 @@ function BenefitsComponent() {
           <h2 className='text-4xl font-semibold tracking-tight  text-primary-950  sm:text-5xl lg:text-6xl'>
             Benefits{' '}
           </h2>
-          <div className=' mx-auto grid gap-12 sm:gap-16 lg:grid-cols-3'>
+          <div className=' mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3'>
             {benefitsData.map((benefit) => (
               <div
                 key={benefit._id}

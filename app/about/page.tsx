@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import type { Metadata } from 'next';
 import PageHeader from '@/components/PageHeader';
