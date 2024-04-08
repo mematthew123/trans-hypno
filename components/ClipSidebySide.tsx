@@ -37,7 +37,7 @@ async function LeftSide() {
         </div>
         {/* Text side */}
         <div className='w-full lg:w-1/2'>
-          <span className='text-primary-500 uppercase text-sm font-bold'>
+          <span className='text-primary-600 uppercase text-base font-bold'>
             {data.subtitle}
           </span>
           <h2 className='text-4xl font-semibold tracking-tight my-5  text-primary-950  sm:text-5xl lg:text-6xl'>
@@ -48,16 +48,23 @@ async function LeftSide() {
               <PortableText value={data.description} components={components} />
             </div>
           </div>
-          <Link href='/learn'>
-            <p className='text-lg text-primary-500'>Learn More</p>
+          <Link href='/about'>
+            <p className=' hidden md:inline-flex hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
+              Read More
+            </p>
           </Link>
         </div>
         <div className=' md:hidden block w-full lg:w-1/2'>
           <img
-            className='w-full h-auto shadow-lg rounded-l-full rounded-t-full '
-            src='/plant.jpg'
+            className='w-full h-60 md:h-96 shadow-lg rounded-l-full rounded-t-full '
+            src={urlForImage(data.image).url() as string}
             alt='Therapy'
           />
+          <Link href='/about'>
+            <p className=' w-20 hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
+              Read More
+            </p>
+          </Link>
         </div>
       </div>
     </section>
@@ -72,7 +79,7 @@ async function RightSide() {
     <section className=' py-20'>
       <div className='container mx-auto flex flex-col lg:flex-row items-center gap-8 px-4'>
         <div className='w-full lg:w-1/2'>
-          <span className='text-primary-500 uppercase text-sm font-bold'>
+          <span className='text-primary-600 uppercase text-base font-bold'>
             {data.subtitle}
           </span>
           <h2 className='text-4xl font-semibold tracking-tight my-5  text-primary-950  sm:text-5xl lg:text-6xl'>
@@ -83,7 +90,10 @@ async function RightSide() {
               <PortableText value={data.description} components={components} />
             </div>
           </div>
-          <Link href='/learn' className=' text-lg text-primary-500'>
+          <Link
+            href='/learn'
+            className='hidden hover:text-primary-50 transition-effect mt-8 md:inline-flex items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'
+          >
             Learn More
           </Link>
         </div>
@@ -93,6 +103,11 @@ async function RightSide() {
             src={urlForImage(data.image).url() as string}
             alt='Therapy'
           />
+          <Link href='/learn' className='flex md:hidden justify-end'>
+            <p className=' w-20 hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
+              Learn More
+            </p>
+          </Link>
         </div>
       </div>
     </section>
