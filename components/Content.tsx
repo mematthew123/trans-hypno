@@ -6,6 +6,8 @@ import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
 import { AboutUsPage, aboutUsPageQuery } from '@/sanity/lib/queries';
 import { client } from '@/sanity/lib/client';
 import { PortableText } from '@portabletext/react';
+import { urlForImage } from '@/sanity/lib/image';
+import Image from 'next/image';
 
 export default async function ContentComponent() {
   const data = await client.fetch(aboutUsPageQuery);
@@ -64,9 +66,9 @@ export default async function ContentComponent() {
                 <div className='relative mx-auto max-w-prose  text-base lg:max-w-none'>
                   <figure>
                     <div className='aspect-h-7 aspect-w-12 lg:aspect-none'>
-                      <img
-                        className='rounded-lg object-cover object-center shadow-lg'
-                        src='/plant.jpg'
+                      <Image
+                        className='rounded-lg   object-cover object-center shadow-lg'
+                        src={urlForImage(aboutUsPage.image).url() as string}
                         alt='Auto Mechanic'
                         width={1184}
                         height={1376}

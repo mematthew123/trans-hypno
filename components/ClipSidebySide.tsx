@@ -99,7 +99,7 @@ async function RightSide() {
         </div>
         <div className='w-full lg:w-1/2'>
           <img
-            className='w-full h-auto shadow-lg rounded-r-full rounded-t-full '
+            className='w-full w-full h-60 md:h-96 shadow-lg rounded-r-full rounded-t-full '
             src={urlForImage(data.image).url() as string}
             alt='Therapy'
           />

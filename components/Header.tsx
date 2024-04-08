@@ -46,9 +46,9 @@ const HeaderComponent = () => {
             <Image
               src='/logo_no-bg.png'
               alt='Transcend Mind & Body'
-              width={80}
+              width={100}
               height={50}
-              className='w-auto h-12 md:h-14 lg:h-16 xl:h-20 2xl:h-24'
+              className='w-auto h-16 sm:h-20'
             />
           </a>
         </div>
