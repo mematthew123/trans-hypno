@@ -13,7 +13,7 @@ export default async function Steps() {
     <section className='py-20 my-20 bg-primary-400/5'>
       <div className='container mx-auto text-center px-4'>
         <div className='mb-8'>
-          <h2 className='text-5xl font-semibold tracking-tight text-primary-950 sm:text-6xl lg:text-7xl'>
+          <h2 className='text-5xl mb-20 font-semibold tracking-tight text-primary-950 sm:text-6xl lg:text-7xl'>
             Get Started
           </h2>
         </div>

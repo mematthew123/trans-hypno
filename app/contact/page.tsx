@@ -17,7 +17,7 @@ export default function Page() {
         description={
           'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui'
         }
-        image='/outdoors.jpg'
+        image='/flowers.jpg'
       />{' '}
       <ContactInfoComponent />
       <GoogleMapComponent />

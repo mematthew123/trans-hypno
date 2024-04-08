@@ -46,7 +46,7 @@ function BenefitsComponent() {
                         height={320}
                       />
                     )}
-                    <p className='text-2xl'>{benefit.title}</p>
+                    <p className=' md:my-6 text-2xl'>{benefit.title}</p>
                   </div>
                   {/* Back face with text */}
                   <div className='absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]'>

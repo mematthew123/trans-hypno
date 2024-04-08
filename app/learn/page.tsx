@@ -20,7 +20,7 @@ const page = () => {
         description={
           'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui'
         }
-        image='/trees.jpg'
+        image='/flowers.jpg'
         className='text-primary-900'
       />
 
