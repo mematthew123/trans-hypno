@@ -7,6 +7,8 @@ import { client } from '@/sanity/lib/client';
 import PageContentComponent from '@/components/PageContent';
 import Quote from '@/components/Quote';
 
+export const revalidate = 3; // 3 seconds
+
 const pageContent = await client.fetch(pageContentQuery);
 console.log(pageContent);
 
@@ -19,11 +21,11 @@ const page = () => {
           'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui'
         }
         image='/trees.jpg'
+        className='text-primary-900'
       />
 
       {/* Page content from the pageContent query */}
       <PageContentComponent pageContent={pageContent} />
-      <Quote />
 
       <CallToActionComponent />
     </div>

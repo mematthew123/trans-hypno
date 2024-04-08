@@ -36,6 +36,7 @@ export type PageContent = {
 export const pageContentQuery = groq`*[_type == "hypnotherapyContent"]{
 
     _id,
+    _rev,
     introTitle,
     mainContent,
     testimonial
