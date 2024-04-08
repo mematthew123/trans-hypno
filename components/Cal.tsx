@@ -8,7 +8,7 @@ export default function Cal({
   hideEventTypeDetails = false,
   layout = 'month_view',
   buttonText = 'Schedule Now',
-  buttonClass = 'mt-8 inline-flex animate-pulse bg-primary-700  text-white items-center justify-center rounded-full px-5 py-3 text-base font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600',
+  buttonClass = ' hover:text-primary-50 transition-effect mt-8 inline-flex items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600',
   calLink = 'mematthew123/30min',
   calConfig = '{"layout":"month_view"}',
 }) {

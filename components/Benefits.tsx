@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { Benefit } from '@/sanity/lib/queries';
 import { benefitsQuery } from '@/sanity/lib/queries';
 import { LightBulbIcon } from '@heroicons/react/24/outline';
+import Cal from './Cal';
 
 function BenefitsComponent() {
   const [benefitsData, setBenefitsData] = useState<Benefit[]>([]);
@@ -38,7 +39,7 @@ function BenefitsComponent() {
                   <div className='absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]'>
                     {benefit.benefitsImage && (
                       <Image
-                        className='object-cover object-left h-full w-full rounded-xl'
+                        className='object-cover cursor-pointer object-left h-full w-full rounded-xl'
                         src={urlForImage(benefit.benefitsImage).url() as string}
                         alt={benefit.title}
                         width={320}
@@ -54,12 +55,12 @@ function BenefitsComponent() {
                         {benefit.title}
                       </h2>
                       <PortableText value={benefit.description} />
-                      <button className=' text-primary-500'>
+                      <button className=' my-2 text-secondary-500'>
                         <LightBulbIcon
                           className='-ml-1 mr-2 h-5 w-5 inline-block'
                           aria-hidden='true'
                         />
-                        <a href='tel:+1406204779'>Schedule Now</a>
+                        <Cal buttonClass='  text-secondary-500 flex  mt-0 w-auto text-xl text-secondary-500 bg-transparent' />
                       </button>
                     </div>
                   </div>

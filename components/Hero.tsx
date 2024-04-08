@@ -25,7 +25,7 @@ async function HeroComponent() {
             <div className='mt-4 text-lg text-gray-300 sm:text-xl'>
               <PortableText value={data.content} />
             </div>
-            <Cal />
+            <Cal buttonText='Schedule Now' />
           </div>
           <div className='flex-1'>
             <Image

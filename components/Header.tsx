@@ -102,7 +102,7 @@ const HeaderComponent = () => {
                 overcome obstacles and achieve their goals. Whether you want to
                 quit smoking, lose weight, or reduce stress, hypnotherapy can
                 help you make lasting changes in your life.
-                <Cal buttonClass=' flex pt-10 mt-0 w-auto text-7xl text-yellow-500 bg-transparent' />
+                <Cal buttonClass=' text-secondary-500 flex pt-10 mt-0 w-auto text-7xl text-yellow-500 bg-transparent' />
               </p>
             </div>
             <nav className='flex flex-col gap-1 divide-y divide-primary-900/10'>
@@ -130,9 +130,7 @@ const HeaderComponent = () => {
                 </a>
               ))}
               {/* we are going to make a button for user to click to call us */}
-              <button className=' animate-pulse md:hidden flex underline underline:blue-200 pt-10 mt-0 w-auto text-2xl text-yellow-500 bg-transparent'>
-                <a href='tel:+1406204779'>Book a Session</a>
-              </button>
+              <Cal buttonClass=' md:hidden text-center justify-center  flex pt-10 mt-0 w-auto text-3xl text-secondary-500 bg-transparent' />
             </nav>
           </div>
         </div>

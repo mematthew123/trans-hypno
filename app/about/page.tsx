@@ -1,12 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import TeamComponent from '@/components/Team';
-import ValuesComponent from '@/components/Values';
 import React from 'react';
 import type { Metadata } from 'next';
-import Page from '../contact/page';
 import PageHeader from '@/components/PageHeader';
-import AboutPageContent from '@/components/AboutPageContent';
-import TestStats from '@/components/TestStats';
 import CallToActionComponent from '@/components/Cta';
 import ContentComponent from '@/components/Content';
 
@@ -15,6 +10,8 @@ export const metadata: Metadata = {
   description:
     'Providing Hypnotherapy in Missoula, Montana. Learn more about our team and values.',
 };
+
+export const revalidate = 3; // 3 seconds
 
 export default function page() {
   return (

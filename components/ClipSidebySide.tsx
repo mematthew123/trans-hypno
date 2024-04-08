@@ -49,7 +49,7 @@ async function LeftSide() {
             </div>
           </div>
           <Link href='/learn'>
-            <p className='text-primary-500'>Learn More</p>
+            <p className='text-lg text-primary-500'>Learn More</p>
           </Link>
         </div>
         <div className=' md:hidden block w-full lg:w-1/2'>
@@ -83,7 +83,7 @@ async function RightSide() {
               <PortableText value={data.description} components={components} />
             </div>
           </div>
-          <Link href='/learn' className='text-primary-500'>
+          <Link href='/learn' className=' text-lg text-primary-500'>
             Learn More
           </Link>
         </div>
