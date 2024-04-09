@@ -11,10 +11,12 @@ import steps from './schemas/steps';
 import hero from './schemas/hero';
 import aboutUsPage from './schemas/aboutUsPage';
 import header from './schemas/header';
+import banner from './schemas/banner';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     blockContent,
+    banner,
     header,
     hero,
     benefits,

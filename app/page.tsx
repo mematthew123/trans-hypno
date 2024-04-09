@@ -1,3 +1,4 @@
+import Banner from '@/components/Banner';
 import BenefitsComponent from '@/components/Benefits';
 import ClipSideBySideComponent from '@/components/ClipSidebySide';
 import CallToActionComponent from '@/components/Cta';

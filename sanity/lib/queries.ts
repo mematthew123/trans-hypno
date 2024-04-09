@@ -154,3 +154,20 @@ export const aboutUsPageQuery = groq`*[_type == "aboutUsPage"]{
     _id,
     _rev
 }`;
+
+export type Banner = {
+  title: string;
+  content: PortableTextBlock[];
+  _id: string;
+  _rev: string;
+  url: string;
+};
+
+export const bannerQuery = groq`*[_type == "banner"]{
+    title,
+    _id,
+    _rev,
+    content,
+    url
+
+}`;
