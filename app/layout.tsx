@@ -9,6 +9,9 @@ export const metadata = {
     template: '%s - Transcend Mind & Body',
     default: 'Transcend Mind & Body',
   },
+  description: {
+    default: 'Witness the power of your mind',
+  },
   openGraph: {
     title: 'Transcend Mind & Body',
     description:
