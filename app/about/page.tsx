@@ -17,7 +17,7 @@ export default function page() {
     <>
       <PageHeader
         title={'About Us'}
-        description={'Hypnotherapy in Missoula, Montana'}
+        description={'Hypnotherapy in for everyone'}
         image='/flowers.jpg'
       />
 

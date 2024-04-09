@@ -16,7 +16,7 @@ const page = () => {
       <PageHeader
         title={'Learn'}
         description={
-          'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui'
+          'Learn about Hypnosis and how it can help you achieve your goals.'
         }
         image='/flowers.jpg'
       />
