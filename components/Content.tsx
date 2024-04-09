@@ -79,7 +79,7 @@ export default async function ContentComponent() {
                         className='h-5 w-5 flex-none text-gray-400'
                         aria-hidden='true'
                       />
-                      <span className='ml-2'>Photograph by Marcus O’Leary</span>
+                      <span className='ml-2'>Photograph by Stef Milks</span>
                     </figcaption>
                   </figure>
                 </div>

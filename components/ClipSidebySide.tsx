@@ -118,7 +118,7 @@ export default function ClipSidebySide() {
   return (
     <div className='my-20 lg:my-40 mx-auto'>
       <LeftSide />
-      <div className='h-20 lg:h-40' />
+      <div className='md:h-20 md:lg:h-40' />
       <RightSide />
     </div>
   );

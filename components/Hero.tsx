@@ -19,7 +19,7 @@ async function HeroComponent() {
           <div className='flex-1 mb-8 md:mb-0'>
             {' '}
             {/* Hero title */}
-            <h1 className='text-4xl font-semibold tracking-tight text-primary-950  sm:text-5xl lg:text-6xl'>
+            <h1 className='text-4xl  font-semibold tracking-tight text-primary-950  sm:text-5xl lg:text-6xl'>
               {data.title}
             </h1>
             <div className='mt-4 text-lg text-gray-300 sm:text-xl'>

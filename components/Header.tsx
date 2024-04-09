@@ -48,7 +48,7 @@ const HeaderComponent = () => {
               alt='Transcend Mind & Body'
               width={100}
               height={50}
-              className='w-auto h-16 sm:h-20'
+              className='w-auto md:h-24 h-20'
             />
           </a>
         </div>
