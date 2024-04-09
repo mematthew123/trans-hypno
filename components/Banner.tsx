@@ -19,7 +19,6 @@ const components: PortableTextComponents = {
 export default async function BannerComponent() {
   const banner = await client.fetch(bannerQuery);
   const data = banner[0] as Banner;
-  console.log(banner);
 
   return (
     <div className='relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 '>

@@ -22,7 +22,6 @@ const components: PortableTextComponents = {
 async function LeftSide() {
   const aboutUs = await client.fetch(aboutUsQuery);
   const data = aboutUs[0] as AboutUs;
-  console.log(data);
 
   return (
     <section className='py-20 bg-primary-400/5 '>
@@ -56,7 +55,7 @@ async function LeftSide() {
             </p>
           </Link>
         </div>
-        <div className=' md:hidden block w-full lg:w-1/2'>
+        <div className=' md:hidden block text-left w-full lg:w-1/2'>
           <Image
             className='w-full h-60 md:h-96 shadow-lg rounded-l-full rounded-t-full aspect-auto'
             src={urlForImage(data.image).url() as string}
@@ -64,8 +63,8 @@ async function LeftSide() {
             width={500}
             height={500}
           />
-          <Link href='/about' aria-description='Read More'>
-            <p className=' w-20 hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
+          <Link href='/about' aria-description='Read More' className='flex'>
+            <p className=' w-auto hover:text-primary-50 transition-effect mt-8   px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
               Read More
             </p>
           </Link>
@@ -115,7 +114,7 @@ async function RightSide() {
             className='flex md:hidden justify-end'
             aria-label='Learn More about Hypnotherapy'
           >
-            <p className=' w-20 hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
+            <p className=' w-auto hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
               Learn More
             </p>
           </Link>

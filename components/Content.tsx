@@ -67,7 +67,7 @@ export default async function ContentComponent() {
                   <figure>
                     <div className='aspect-h-7 aspect-w-12 lg:aspect-none'>
                       <Image
-                        className='rounded-lg   object-cover object-center shadow-lg'
+                        className='rounded-lg object-cover object-center shadow-lg'
                         src={urlForImage(aboutUsPage.image).url() as string}
                         alt='Auto Mechanic'
                         width={1184}
@@ -89,14 +89,6 @@ export default async function ContentComponent() {
                   <div className='text-xl '>
                     <PortableText value={aboutUsPage.content} />
                   </div>
-                  <Link
-                    href='/contact'
-                    className='inline-flex text-xl items-center mt-8 text-primary-500 hover:text-primary-600'
-                  >
-                    <p className='inline-flex text-xl items-center mt-8 text-primary-500 hover:text-primary-600'>
-                      Get in Touch
-                    </p>
-                  </Link>
                 </div>
               </div>
             </div>

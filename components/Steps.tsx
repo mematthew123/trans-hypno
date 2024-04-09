@@ -7,7 +7,6 @@ import Link from 'next/link';
 
 export default async function Steps() {
   const steps = await client.fetch(stepsQuery);
-  console.log(steps);
 
   return (
     <section className='py-20 my-20 bg-primary-400/5'>

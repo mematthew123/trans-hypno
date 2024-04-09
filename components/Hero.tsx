@@ -10,7 +10,6 @@ import Image from 'next/image';
 async function HeroComponent() {
   const hero = await client.fetch(heroQuery);
   const data = hero[0] as Hero;
-  console.log(data);
 
   return (
     <section className=' py-16 sm:py-20 h-[90vh]'>

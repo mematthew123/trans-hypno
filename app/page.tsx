@@ -13,7 +13,6 @@ export const revalidate = 3; // 3 seconds
 
 export default async function Page() {
   const faqs = await client.fetch(faqsQuery);
-  console.log(faqs);
 
   return (
     <>
