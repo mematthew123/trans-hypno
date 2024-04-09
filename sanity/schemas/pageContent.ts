@@ -19,7 +19,7 @@ export default defineType({
 
     defineField({
       name: 'testimonial',
-      title: 'Testimonial',
+      title: 'Quote',
       type: 'string',
     }),
   ],

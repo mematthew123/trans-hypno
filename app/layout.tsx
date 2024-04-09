@@ -9,10 +9,30 @@ export const metadata = {
     template: '%s - Transcend Mind & Body',
     default: 'Transcend Mind & Body',
   },
-  description:
-    'Hypnotherapy is a powerful tool that can help you overcome obstacles and achieve your goals.',
-  image: '/logo_no-bg.png',
+  openGraph: {
+    title: 'Transcend Mind & Body',
+    description:
+      'Witness the power of your mind and body with Transcend Mind & Body.',
+    url: 'https://trans-hypno.vercel.app',
+    siteName: 'Transcend Mind & Body',
+    images: [
+      {
+        url: 'https://trans-hypno.vercel.app/logo_no-bg.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://trans-hypno.vercel.app/logo_no-bg.png',
+        width: 1800,
+        height: 1600,
+        alt: 'Transcend Mind & Body',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -23,7 +43,6 @@ export default function RootLayout({
       <html lang='en'>
         <body className='bg-primary-50 text-primary-950 antialiased transition  '>
           <Analytics />
-          <Banner />
           <HeaderComponent />
           {children}
           <FooterComponent />
