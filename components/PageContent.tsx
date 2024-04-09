@@ -4,7 +4,7 @@ interface PageContent {
   _id: string;
   introTitle: string;
   mainContent: any[]; // This matches the block content structure from Sanity
-  testimonial: any[]; // This matches the block content structure from Sanity
+  testimonial: string; // Adjusted to be a string based on your JSON
 }
 
 export default function PageContentComponent({

@@ -45,7 +45,7 @@ const HeaderComponent = () => {
             <span className='sr-only'>Transcend Mind & Body</span>
             <Image
               src='/logo_no-bg.png'
-              alt='Transcend Mind & Body'
+              alt='Transcend Hypnotherapy'
               width={100}
               height={50}
               className='w-auto md:h-24 h-20'
@@ -63,13 +63,13 @@ const HeaderComponent = () => {
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
                 viewBox='0 0 24 24'
-                stroke-width='1.5'
+                strokeWidth='1.5'
                 stroke='currentColor'
                 className='w-8 h-8'
               >
                 <path
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                   d='M6 18 18 6M6 6l12 12'
                 />
               </svg>
@@ -78,13 +78,13 @@ const HeaderComponent = () => {
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
                 viewBox='0 0 24 24'
-                stroke-width='1.5'
+                strokeWidth={1.5}
                 stroke='currentColor'
                 className='w-8 h-8'
               >
                 <path
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                   d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
                 />
               </svg>
@@ -102,7 +102,7 @@ const HeaderComponent = () => {
                 overcome obstacles and achieve their goals. Whether you want to
                 quit smoking, lose weight, or reduce stress, hypnotherapy can
                 help you make lasting changes in your life.
-                <Cal buttonClass=' text-secondary-500 flex pt-10 mt-0 w-auto text-7xl text-yellow-500 bg-transparent' />
+                <Cal buttonClass=' text-secondary-500 flex pt-10 mt-0 w-auto text-7xl text-secondary-500 bg-transparent' />
               </p>
             </div>
             <nav className='flex flex-col gap-1 divide-y divide-primary-900/10'>
@@ -110,6 +110,7 @@ const HeaderComponent = () => {
                 <a
                   key={link.ref}
                   href={link.href}
+                  aria-description='Navigate to page'
                   className='group inline-flex py-6 text-3xl font-medium tracking-tight text-primary-950 transition focus-visible:outline-none  sm:py-8 sm:text-4xl'
                 >
                   <div className='flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 '>

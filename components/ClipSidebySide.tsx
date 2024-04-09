@@ -29,10 +29,12 @@ async function LeftSide() {
       <div className='container mx-auto flex flex-col lg:flex-row items-center gap-8 px-4'>
         {/* Image side */}
         <div className=' hidden md:block w-full lg:w-1/2'>
-          <img
-            className='w-full h-auto shadow-lg rounded-l-full rounded-t-full '
+          <Image
+            className='w-full h-auto shadow-lg rounded-l-full rounded-t-full aspect-auto'
             src={urlForImage(data.image).url() as string}
-            alt='Therapy'
+            alt='Therapy Services'
+            width={500}
+            height={500}
           />
         </div>
         {/* Text side */}
@@ -48,19 +50,21 @@ async function LeftSide() {
               <PortableText value={data.description} components={components} />
             </div>
           </div>
-          <Link href='/about'>
+          <Link href='/about' aria-description='Read More about Hypnotherapy'>
             <p className=' hidden md:inline-flex hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
               Read More
             </p>
           </Link>
         </div>
         <div className=' md:hidden block w-full lg:w-1/2'>
-          <img
-            className='w-full h-60 md:h-96 shadow-lg rounded-l-full rounded-t-full '
+          <Image
+            className='w-full h-60 md:h-96 shadow-lg rounded-l-full rounded-t-full aspect-auto'
             src={urlForImage(data.image).url() as string}
-            alt='Therapy'
+            alt='Therapy for all'
+            width={500}
+            height={500}
           />
-          <Link href='/about'>
+          <Link href='/about' aria-description='Read More'>
             <p className=' w-20 hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
               Read More
             </p>
@@ -92,18 +96,25 @@ async function RightSide() {
           </div>
           <Link
             href='/learn'
+            aria-label='Learn More about Hypnotherapy'
             className='hidden hover:text-primary-50 transition-effect mt-8 md:inline-flex items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'
           >
             Learn More
           </Link>
         </div>
         <div className='w-full lg:w-1/2'>
-          <img
-            className='w-full w-full h-60 md:h-96 shadow-lg rounded-r-full rounded-t-full '
+          <Image
+            className='w-full  h-60 md:h-96 shadow-lg rounded-r-full rounded-t-full aspect-auto	'
             src={urlForImage(data.image).url() as string}
             alt='Therapy'
+            width={500}
+            height={500}
           />
-          <Link href='/learn' className='flex md:hidden justify-end'>
+          <Link
+            href='/learn'
+            className='flex md:hidden justify-end'
+            aria-label='Learn More about Hypnotherapy'
+          >
             <p className=' w-20 hover:text-primary-50 transition-effect mt-8  items-center justify-center px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
               Learn More
             </p>
