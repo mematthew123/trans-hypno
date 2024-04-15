@@ -5,7 +5,7 @@ import { PortableTextBlock, ImageAsset } from 'sanity';
 
 // Get all posts
 export const postsQuery = groq`*[_type == "post" && defined(slug.current)]{
-    _id, title, slug, mainImage, publishedAt, excerpt,recording
+    _id, title, slug, mainImage, publishedAt, excerpt,recording, categories
   }`;
 
 // Get a single post by its slug
@@ -17,6 +17,12 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
     "params": { "slug": slug.current }
   }`;
+
+// Get all categories
+export const categoriesQuery = groq`*[_type == "category"]{
+    _id, title
+  }`;
+
 
 export const faqsQuery = groq`*[_type == "faqs"]{
     _id,

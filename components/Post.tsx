@@ -51,11 +51,12 @@ export default function Post({ post }: { post: SanityDocument }) {
       <h1 className='text-4xl font-bold'>{post?.title}</h1>
       {post?.mainImage ? (
         <Image
-          className=' m-0 w-1/3 mr-4 rounded-lg'
+          className=' m-0 p-0 object-cover w-auto h-auto md:h-full md:w-full  max-w-xl rounded-3xl'
           src={builder.image(post.mainImage).width(300).height(300).url()}
-          width={300}
+          width={600}
           height={300}
           alt={post?.mainImage?.alt}
+          quality={100}
         />
       ) : null}
       {post?.body ? <PortableTextRenderer content={post.body} /> : null}
