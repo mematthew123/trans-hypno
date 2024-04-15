@@ -27,6 +27,11 @@ const links = [
     name: 'Learn',
     href: '/learn',
   },
+  {
+    ref: '05',
+    name: 'Library',
+    href: '/library',
+  }
 ];
 
 const HeaderComponent = () => {

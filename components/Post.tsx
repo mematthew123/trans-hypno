@@ -1,5 +1,5 @@
 'use client';
-
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
 import { SanityDocument } from '@sanity/client';
@@ -27,10 +27,27 @@ const PortableTextRenderer = ({ content }: PortableTextRendererProps) => (
 );
 
 export default function Post({ post }: { post: SanityDocument }) {
+  const [recordingUrl, setRecordingUrl] = useState('');
+
+  useEffect(() => {
+    async function fetchRecordingUrl() {
+      // Assuming `client` is configured with your project details
+      if (post?.recording?.asset?._ref) {
+        const assetId = post.recording.asset._ref;
+        const asset = await client.fetch(`*[_id == $id][0]`, { id: assetId });
+        if (asset && asset.url) {
+          setRecordingUrl(asset.url);
+        }
+      }
+    }
+
+    fetchRecordingUrl();
+  }, [post]);
+
   return (
     <main className='container mx-auto prose prose-lg p-4'>
-      {/* <h1 className='text-4xl font-bold'>{post?.title}</h1> */}
-      {/* {post?.mainImage ? (
+      <h1 className='text-4xl font-bold'>{post?.title}</h1>
+      {post?.mainImage ? (
         <Image
           className='float-left m-0 w-1/3 mr-4 rounded-lg'
           src={builder.image(post.mainImage).width(300).height(300).url()}
@@ -38,8 +55,9 @@ export default function Post({ post }: { post: SanityDocument }) {
           height={300}
           alt={post?.mainImage?.alt}
         />
-      ) : null} */}
+      ) : null}
       {post?.body ? <PortableTextRenderer content={post.body} /> : null}
+      {recordingUrl && <audio controls src={recordingUrl} />}
     </main>
   );
 }
