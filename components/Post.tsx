@@ -45,11 +45,13 @@ export default function Post({ post }: { post: SanityDocument }) {
   }, [post]);
 
   return (
-    <main className='container mx-auto prose prose-lg p-4'>
+    <section className=' py-16 sm:py-20'>
+    <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+    <div className='container mx-auto prose prose-lg p-4'>
       <h1 className='text-4xl font-bold'>{post?.title}</h1>
       {post?.mainImage ? (
         <Image
-          className='float-left m-0 w-1/3 mr-4 rounded-lg'
+          className=' m-0 w-1/3 mr-4 rounded-lg'
           src={builder.image(post.mainImage).width(300).height(300).url()}
           width={300}
           height={300}
@@ -58,6 +60,8 @@ export default function Post({ post }: { post: SanityDocument }) {
       ) : null}
       {post?.body ? <PortableTextRenderer content={post.body} /> : null}
       {recordingUrl && <audio controls src={recordingUrl} />}
-    </main>
+    </div>
+    </div>
+    </section>
   );
 }
