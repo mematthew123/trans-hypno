@@ -5,6 +5,7 @@ import CallToActionComponent from '@/components/Cta';
 import FaqsComponents from '@/components/FaqsComponent';
 import HeroComponent from '@/components/Hero';
 import ReviewsComponent from '@/components/Reviews';
+import StepsComponent from '@/components/Steps';
 import Steps from '@/components/Steps';
 import { client } from '@/sanity/lib/client';
 import { faqsQuery } from '@/sanity/lib/queries';
@@ -17,7 +18,7 @@ export default async function Page() {
   return (
     <>
       <HeroComponent />
-      <Steps />
+      <StepsComponent />
       <BenefitsComponent />
       <ClipSideBySideComponent />
       <ReviewsComponent />

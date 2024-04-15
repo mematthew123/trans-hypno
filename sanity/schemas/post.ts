@@ -24,12 +24,7 @@ export default defineType({
       title: 'Excerpt',
       type: 'text',
     }),
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: { type: 'author' },
-    }),
+
     defineField({
       name: 'mainImage',
       title: 'Main image',
@@ -37,20 +32,8 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-        },
-      ],
     }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }],
-    }),
+   
     defineField({
       name: 'publishedAt',
       title: 'Published at',
@@ -62,21 +45,10 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'markdown',
+      name:'recording',
+      title:'Recording',
+      type:'file',
     }),
-  ],
 
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const { author } = selection;
-      return { ...selection, subtitle: author && `by ${author}` };
-    },
-  },
+  ],
 });

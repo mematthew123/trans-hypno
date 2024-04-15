@@ -5,7 +5,7 @@ import { Steps, stepsQuery } from '@/sanity/lib/queries';
 import { client } from '@/sanity/lib/client';
 import Link from 'next/link';
 
-export default async function Steps() {
+export default async function StepsComponent() {
   const steps = await client.fetch(stepsQuery);
 
   return (

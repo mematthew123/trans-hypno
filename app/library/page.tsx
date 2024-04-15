@@ -36,7 +36,7 @@ export default async function PostsPage() {
         <div className='mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='flex flex-col gap-4 sm:gap-6'>
             <h1 className='text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl'>
-              Missoula Auto Repair Blog
+             Transcend Mind & Body Library
             </h1>
           </div>
         </div>
@@ -46,22 +46,25 @@ export default async function PostsPage() {
         <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='grid gap-16 lg:grid-cols-2 lg:gap-24'>
             <Image
-              className='mx-auto h-full w-full max-w-xl rounded-3xl'
+              className='mx-auto  max-w-xl rounded-3xl'
               width='576'
               height='864'
-              src='/taillight.jpg'
+              src='/plant.jpg'
               alt='Our experts working together'
+              sizes='(min-width: 1024px) 576px, 100vw'
             />
             <div className='flex flex-col gap-10'>
               {/* <!-- Blog Post Content--> */}
               <div className='space-y-8 sm:space-y-12'>
                 <h2 className='text-xl font-medium tracking-tight sm:text-4xl'>
-                  Welcome to Missoula Auto Repair Blog!
+                  Welcome to the Transcend Mind & Body Library
                 </h2>
                 <p className='text-xl font-medium tracking-tight '>
-                  We are excited to share our knowledge and expertise with you.
-                  We will be posting regularly about common car problems,
-                  maintenance tips, and more!
+                  Our library is a collection of audio recordings that we have
+                  created to help you achieve your goals. They are designed to compliment your sessions.
+                  We have recordings for
+                  weight loss, smoking cessation, stress reduction, and more.
+
                 </p>
                 <p className='text-xl font-medium tracking-tight '>
                   We hope you enjoy our content and learn something new!
@@ -79,7 +82,7 @@ export default async function PostsPage() {
 
             {/* <!-- Here is our list of blog posts --> */}
             {posts.map((post: any) => (
-              <Link href={`blog/${post.slug.current}`} key={post._id}>
+              <Link href={`library/${post.slug.current}`} key={post._id}>
                 <div key={post._id}>
                   <h2 className='mt-10 text-3xl font-medium tracking-tight sm:text-4xl'>
                     {post.title}

@@ -12,10 +12,14 @@ import hero from './schemas/hero';
 import aboutUsPage from './schemas/aboutUsPage';
 import header from './schemas/header';
 import banner from './schemas/banner';
+import post from './schemas/post';
+import category from './schemas/category';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     blockContent,
+    post,
+    category,
     banner,
     header,
     hero,
