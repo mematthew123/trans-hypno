@@ -49,7 +49,7 @@ export default async function PostsPage() {
         <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='grid gap-16 lg:grid-cols-2 lg:gap-24'>
             <Image
-              className='mx-auto w-auto h-auto md:h-full md:w-full  max-w-xl rounded-3xl'
+              className='hidden md:block mx-auto w-auto h-auto md:h-full md:w-full  max-w-xl rounded-3xl'
              width='2000'
               height='864'
               src='/plant.jpg'
@@ -58,7 +58,7 @@ export default async function PostsPage() {
             <div className='flex flex-col gap-10'>
               {/* <!-- Blog Post Content--> */}
               <div className='space-y-8 sm:space-y-12'>
-                <h2 className='text-xl font-medium tracking-tight sm:text-4xl'>
+                <h2 className='text-xl font-semibold tracking-tight sm:text-4xl'>
                   Welcome to the Transcend Mind & Body Library
                 </h2>
                 <p className='text-xl font-medium tracking-tight '>
