@@ -46,12 +46,11 @@ export default async function PostsPage() {
         <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='grid gap-16 lg:grid-cols-2 lg:gap-24'>
             <Image
-              className='mx-auto  max-w-xl rounded-3xl'
-              width='576'
+              className='mx-auto w-auto h-auto md:h-full md:w-full  max-w-xl rounded-3xl'
+             width='2000'
               height='864'
               src='/plant.jpg'
               alt='Our experts working together'
-              sizes='(min-width: 1024px) 576px, 100vw'
             />
             <div className='flex flex-col gap-10'>
               {/* <!-- Blog Post Content--> */}
@@ -91,9 +90,7 @@ export default async function PostsPage() {
                     <p className='text-base text-primary-950/70  sm:text-lg'>
                       {post.excerpt}
                     </p>
-                    <p className='text-base text-primary-950/70  sm:text-lg'>
-                      {post.publishedAt}
-                    </p>
+                    
                     {/* <p className='text-base text-primary-950/70  sm:text-lg'>
                       {post.slug.current}
                     </p> */}
