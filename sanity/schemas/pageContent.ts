@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'hypnotherapyContent',
-  title: 'Hypnotherapy Content',
+  title: 'Learn Page ',
   type: 'document',
   fields: [
     defineField({
@@ -20,7 +20,7 @@ export default defineType({
     defineField({
       name: 'testimonial',
       title: 'Quote',
-      type: 'string',
+     type:'string',
     }),
   ],
 });

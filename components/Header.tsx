@@ -45,15 +45,24 @@ const HeaderComponent = () => {
         <div className='flex'>
           <a
             href='/'
-            className='rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-950 '
+            className=' focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-950 '
           >
             <span className='sr-only'>Transcend Mind & Body</span>
             <Image
-              src='/logo_no-bg.png'
+              src='/logo-text.png'
               alt='Transcend Hypnotherapy'
-              width={100}
-              height={50}
-              className='w-auto md:h-24 h-20'
+              width={700}
+              height={700}
+              className='md:w-auto hidden md:flex md:h-14'
+              sizes='(max-width: 640px) 100vw, (max-width: 768px) 80vw, 700px'
+            />
+             <Image
+              src='/logo-text.png'
+              alt='Transcend Hypnotherapy'
+              width={200}
+              height={200}
+              className='md:w-auto flex md:hidden md:h-14'
+              sizes='(max-width: 640px) 100vw, (max-width: 768px) 80vw, 700px'
             />
           </a>
         </div>

@@ -23,5 +23,6 @@ export default defineType({
         hotspot: true, // <-- Defaults to false
       },
     }),
+    
   ],
 });

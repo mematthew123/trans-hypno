@@ -26,6 +26,27 @@ const PortableTextRenderer = ({ content }: PortableTextRendererProps) => (
   />
 );
 
+
+type Post = {
+  mainImage: {
+    asset: {
+      url: string;
+      type: string;
+    };
+  };
+  categories: {
+    title: string;
+    _id: string;
+  }[];
+  title: string;
+  excerpt: string;
+  publishedAt: string;
+  slug: {
+    current: string;
+  };
+  _id: string;
+};
+
 export default function Post({ post }: { post: SanityDocument }) {
   const [recordingUrl, setRecordingUrl] = useState('');
 

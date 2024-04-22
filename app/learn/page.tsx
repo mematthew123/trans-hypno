@@ -8,9 +8,12 @@ import PageContentComponent from '@/components/PageContent';
 
 export const revalidate = 3; // 3 seconds
 
-const pageContent = await client.fetch(pageContentQuery);
 
-const page = () => {
+ export default async function page() {
+  // Fetch the page content from Sanity
+  const pageContent = await client.fetch(pageContentQuery, {
+    slug: 'learn',
+  });
   return (
     <div>
       <PageHeader
@@ -29,4 +32,4 @@ const page = () => {
   );
 };
 
-export default page;
+

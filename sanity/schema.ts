@@ -18,18 +18,17 @@ import category from './schemas/category';
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     blockContent,
-    post,
-    category,
-    banner,
     header,
     hero,
     benefits,
     faqs,
-    pageContent,
     aboutUs,
     education,
     reviews,
     steps,
+    post,
+    category,
     aboutUsPage,
+    pageContent,
   ],
 };
