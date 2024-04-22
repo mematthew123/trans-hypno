@@ -12,7 +12,7 @@ async function HeroComponent() {
   const data = hero[0] as Hero;
 
   return (
-    <section className=' py-16 sm:py-20 h-[90vh]'>
+    <section className=' py-16 sm:py-20 h-[60vh] md:h-[90vh]'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col md:flex-row gap-8 md:gap-16 items-center'>
           <div className='flex-1 mb-8 md:mb-0'>
@@ -28,7 +28,7 @@ async function HeroComponent() {
           </div>
           <div className='flex-1'>
             <Image
-              className=' md:inline-block md:object-center md:h-96 h-64 md:w-full rounded-3xl'
+              className=' h-40 object-contain md:inline-block md:object-center md:h-96 md:w-full rounded-3xl'
               src={urlForImage(data.image).url() as string}
               alt='Auto Shop'
               width={500}
