@@ -71,10 +71,11 @@ export default function PostsPage() {
                   Welcome to the Transcend Mind & Body Library
                 </h2>
                 <p className="text-xl font-medium tracking-tight ">
-                  These recordings are available to you at no charge. While they
+                  These resources are available to you at no charge. While they
                   are not a substitute for therapy, they can be a helpful tool
-                  to use in between sessions. There are recordings for weight
-                  loss, smoking cessation, stress reduction, and more.
+                  to use in between sessions. We have a collection of recordings
+                  and articles that we have created to help you achieve your
+                  goals.
                 </p>
                 <p className="text-xl font-medium tracking-tight ">
                   We hope you enjoy our content and learn something new!
@@ -89,13 +90,10 @@ export default function PostsPage() {
                 </p>
               </div>
               <CategorySelector onSelectCategory={setSelectedCategory} />
-
             </div>
             {/* <!-- Here is our list of blog posts --> */}
-
           </div>
           <Posts posts={posts as any} />
-
         </div>
       </section>
     </>

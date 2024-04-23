@@ -22,7 +22,7 @@ const CategorySelector = ({ onSelectCategory }: { onSelectCategory: (category: s
   return (
     <div className='relative'>
     <select 
-        className='w-full bg-secondary-400 text-secondary-950 p-4 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-secondary-600 focus:border-transparent'
+        className='w-full  text-secondary-950 p-4 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-secondary-600 focus:border-transparent'
         onChange={(e) => onSelectCategory(e.target.value)} 
         defaultValue=""
     >
