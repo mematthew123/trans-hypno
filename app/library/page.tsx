@@ -34,6 +34,7 @@ type Post = {
 export default function PostsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [posts, setPosts] = useState([]);
+  
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -50,7 +51,7 @@ export default function PostsPage() {
     <>
       <PageHeader
         title="Transcend Mind & Body Library"
-        description="Our library is a collection of audio recordings that we have created to help you achieve your goals. They are designed to compliment your sessions. We have recordings for weight loss, smoking cessation, stress reduction, and more."
+        description="Our library is a collection of resources that we have put together to help you achieve your goals. They are designed to compliment your sessions. We have recordings for weight loss, smoking cessation, stress reduction, and more."
         image="/plant.jpg"
       />
 
@@ -84,8 +85,8 @@ export default function PostsPage() {
                 <p className="text-xl font-medium tracking-tight ">
                   If you have any questions or would like to schedule an
                   appointment, please call us at{" "}
-                  <a href="tel:+1406-555-5555" className="text-primary-500">
-                    (406) 555-5555
+                  <a href="tel:+14064932874" className="text-primary-800">
+                  (406) 493-2874
                   </a>
                 </p>
               </div>

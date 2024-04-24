@@ -12,7 +12,7 @@ async function HeroComponent() {
   const data = hero[0] as Hero;
 
   return (
-    <section className="py-16 sm:py-20  md:h-[90vh]">
+    <section className="py-20  h-[100vh] md:h-[90vh]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           {/* Hero title and PortableText */}
@@ -36,6 +36,8 @@ async function HeroComponent() {
               alt="Auto Shop"
               width={500}
               height={500}
+              priority
+              quality={100}
             />
           </div>
           {/* Cal Component */}
