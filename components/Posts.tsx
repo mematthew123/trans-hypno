@@ -23,7 +23,7 @@ export default function Posts({ posts = [] }: { posts: SanityDocument[] }) {
                 alt={post.title}
                 height={500}
                 width={500}
-                className="rounded-xl w-full h-40 sm:h-64 gap-4 object-cover  object-center"
+                className="rounded-xl w-full h-64 gap-4 object-cover object-center"
               />
             </div>
           </div>

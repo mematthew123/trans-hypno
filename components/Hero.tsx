@@ -12,7 +12,7 @@ async function HeroComponent() {
   const data = hero[0] as Hero;
 
   return (
-    <section className="py-20  h-[100vh] md:h-[90vh]">
+    <section className="md:py-20 py-12  h-[90vh]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           {/* Hero title and PortableText */}
@@ -33,17 +33,17 @@ async function HeroComponent() {
             <Image
               className="h-64 w-64 object-contain md:inline-block md:object-center md:h-96 md:w-96 rounded-3xl"
               src={urlForImage(data.image).url() as string}
-              alt="Auto Shop"
+              alt="Image of Therapy"
               width={500}
               height={500}
               priority
               quality={100}
             />
+            <div className="md:hidden w-full flex justify-center mt-8 mb-10 md:mt-0">
+              <Cal buttonText="Schedule Now" />
+            </div>
           </div>
           {/* Cal Component */}
-          <div className="md:hidden w-full flex justify-center mt-8 md:mt-0">
-            <Cal buttonText="Schedule Now" />
-          </div>
         </div>
       </div>
     </section>

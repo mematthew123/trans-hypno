@@ -34,6 +34,8 @@ async function LeftSide() {
             alt='Therapy Services'
             width={500}
             height={500}
+            priority
+            quality={100}
           />
         </div>
         {/* Text side */}
@@ -62,6 +64,8 @@ async function LeftSide() {
             alt='Therapy for all'
             width={500}
             height={500}
+            priority  
+            quality={100}
           />
           <Link href='/about' aria-description='Read More' className='flex'>
             <p className=' w-auto hover:text-primary-50 transition-effect mt-8   px-5 py-3 text-lg font-medium hover:shadow-md text-white hover:-translate-y-1 hover:scale-110 rounded-full transition-colors duration-1000 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600'>
@@ -108,6 +112,8 @@ async function RightSide() {
             alt='Therapy'
             width={500}
             height={500}
+            priority
+            quality={100}
           />
           <Link
             href='/learn'

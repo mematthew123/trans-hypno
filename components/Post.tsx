@@ -78,6 +78,7 @@ export default function Post({ post }: { post: SanityDocument }) {
           height={300}
           alt={post?.mainImage?.alt}
           quality={100}
+          priority
         />
       ) : null}
       {post?.body ? <PortableTextRenderer content={post.body} /> : null}

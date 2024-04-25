@@ -34,7 +34,6 @@ type Post = {
 export default function PostsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [posts, setPosts] = useState([]);
-  
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -86,11 +85,19 @@ export default function PostsPage() {
                   If you have any questions or would like to schedule an
                   appointment, please call us at{" "}
                   <a href="tel:+14064932874" className="text-primary-800">
-                  (406) 493-2874
+                    (406) 493-2874
                   </a>
                 </p>
               </div>
-              <CategorySelector onSelectCategory={setSelectedCategory} />
+              <CategorySelector
+                onSelectCategory={(category) => {
+                  if (category === "") {
+                    setSelectedCategory(null); // Set to null instead of empty string which shows all categories
+                  } else {
+                    setSelectedCategory(category);
+                  }
+                }}
+              />
             </div>
             {/* <!-- Here is our list of blog posts --> */}
           </div>
