@@ -61,7 +61,7 @@ const HeaderComponent = () => {
               alt='Transcend Hypnotherapy'
               width={200}
               height={200}
-              className='md:w-auto flex md:hidden md:h-14'
+              className='md:w-auto flex md:hidden '
               sizes='(max-width: 640px) 100vw, (max-width: 768px) 80vw, 700px'
             />
           </a>

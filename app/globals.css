@@ -420,51 +420,25 @@ body {
   margin: 0;
   color: var(--bodyTextColor);
 }
-
-
-/* styles/globals.css or a component-specific CSS module */
 @keyframes twinkle {
   0%, 100% {
-    opacity: 3;
+    opacity: 1; /* Star fully visible at the start and end */
   }
   50% {
-    opacity: 0;
+    opacity: 0; /* Star fully invisible at the midpoint */
   }
 }
 
 .star {
-  width: 3px;
-  height: 3px;
+  width: .25em;
+  height: .25em;
   background-color: white;
   border-radius: 50%;
   position: absolute;
+  animation-name: twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
-
-/* Randomize animation delays and durations to make the twinkling effect more natural */
-.star:nth-child(1) { animation: twinkle 1s infinite; top: 10%; left: 20%; }
-.star:nth-child(2) { animation: twinkle 2s infinite; top: 15%; left: 25%; }
-.star:nth-child(3) { animation: twinkle .6s infinite; top: 20%; left: 60%; }
-.star:nth-child(4) { animation: twinkle 2s infinite; top: 30%; left: 90%; }
-.star:nth-child(5) { animation: twinkle 2s infinite; top: 25%; left: 40%; }
-.star:nth-child(6) { animation: twinkle 4s infinite; top: 10%; left: 60%; }
-.star:nth-child(7) { animation: twinkle 2s infinite; top: 30%; left: 80%; }
-.star:nth-child(8) { animation: twinkle .8s infinite; top: 20%; left: 10%; }
-.star:nth-child(9) { animation: twinkle 1s infinite; top: 15%; left: 30%; }
-
-.star:nth-child(10) { animation: twinkle .8s infinite; top: 25%; left: 70%; }
-.star:nth-child(11) { animation: twinkle 1s infinite; top: 10%; left: 40%; }
-.star:nth-child(12) { animation: twinkle 1s infinite; top: 20%; left: 20%; }
-.star:nth-child(13) { animation: twinkle 2s infinite; top: 15%; left: 80%; }
-.star:nth-child(14) { animation: twinkle 1s infinite; top: 30%; left: 10%; }
-.star:nth-child(15) { animation: twinkle 4s infinite; top: 25%; left: 50%; }
-.star:nth-child(16) { animation: twinkle 2s infinite; top: 20%; left: 70%; }
-.star:nth-child(17) { animation: twinkle .7s infinite; top: 10%; left: 30%; }
-.star:nth-child(18) { animation: twinkle 1s infinite; top: 40%; left: 50%; }
-.star:nth-child(19) { animation: twinkle 3s infinite; top: 20%; left: 20%; }
-.star:nth-child(20) { animation: twinkle .6s infinite; top: 15%; left: 45%; }
-
-
-/* Add as many as you need, potentially randomly placed with different timings */
 
 
 
