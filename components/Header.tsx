@@ -41,7 +41,7 @@ const HeaderComponent = () => {
     <header
       className={`transition ${open ? 'bg-primary-500/10 ' : 'bg-primary-50 '}`}
     >
-      <div className='mx-auto flex max-w-2xl items-center justify-between px-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8'>
+      <div className='mx-auto  flex max-w-2xl items-center justify-between px-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8'>
         <div className='flex'>
           <a
             href='/'

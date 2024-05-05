@@ -12,23 +12,41 @@ import starryNight from "@/public/no-logo.png";
 async function HeroComponent() {
   const hero = await client.fetch(heroQuery);
   const data = hero[0] as Hero;
-  const numStars = 500; // Adjust the number of stars here
-  const stars = Array.from({ length: numStars }, (_, i) => (
-    <div key={i} className="star" />
-  ));
+
+  // Shooting star animation
+  const stars = [];
+
+  for (let i = 0; i < 10; i++) {
+    stars.push(
+      <div
+        key={i}
+        className="shooting-star"
+        style={{
+          animationDelay: `${Math.random() * 300}s`,
+          animationDuration: `${Math.random() * 6 + 3}s`,
+          left: `${Math.random() * 1}%`,
+          right: `${Math.random() * 100}%`,
+          top: `${Math.random() * 30}%`,
+          borderRadius: `${Math.random() * 90}%`,
+
+          opacity: `${Math.random()}`,
+        }}
+      ></div>
+    );
+  }
+
   return (
-    <section className="md:py-20 relative py-12  h-[85vh]">
+    <section className="md:py-20 lg:max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative py-12 h-[95vh]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Image
           src={starryNight}
           alt="starry night"
           width={1920}
           height={1080}
-          className="absolute inset-0 object-cover w-full h-full opacity-95"
+          className="absolute inset-0 object-cover rounded-lg w-full h-full opacity-95"
         />
-        <div className="flex flex-col mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 absolute inset-0 md:flex-row gap-8 md:gap-16 items-center">
+        <div className="flex flex-col rounded-md mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 absolute inset-0 md:flex-row gap-8 md:gap-16 items-center">
           {/* Hero title and PortableText */}
-          {stars}
           <div className="flex-1">
             <h1 className=" hidden md:flex text-4xl md:mt-0 mt-20 text-center md:text-left font-semibold tracking-tight text-primary-950 sm:text-5xl lg:text-6xl">
               {data.title}
@@ -44,14 +62,18 @@ async function HeroComponent() {
           {/* Image */}
           <div className="flex-1">
             <Image
-              className="h-64 w-64 translate-x-0 -translate-y-3/4 md:-translate-y-8  object-contain md:inline-block md:object-center md:h-96 md:w-96 rounded-3xl"
+              className=" h-80 w-80 md:h-4/6 md:w-4/6 translate-x-0 -translate-y-1/4 md:-translate-y-8  object-contain md:inline-block md:object-center md:rounded-3xl"
               src={urlForImage(data.image).url() as string}
               alt="Image of Therapy"
-              width={500}
-              height={500}
+              width={600}
+              height={600}
               priority
               quality={100}
             />
+            {stars}
+            <div className="shooting-star"></div> {/* Shooting star element */}
+            <div className=" hidden md:shooting-star2"></div>{" "}
+            {/* Shooting star element */}
             <div className="md:hidden w-full flex justify-center mt-8 mb-10 md:mt-0">
               <Cal buttonText="Schedule Now" />
             </div>
