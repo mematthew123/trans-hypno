@@ -43,15 +43,15 @@ async function HeroComponent() {
           alt="starry night"
           width={1920}
           height={1080}
-          className="absolute inset-0 object-cover rounded-lg w-full h-full opacity-95"
+          className="absolute inset-0 object-cover translate-x-0 translate-y-10 mb-10 md:mb-0 rounded-t-none rounded-lg  md:rounded-lg lg:w-full w-auto h-full opacity-95"
         />
         <div className="flex flex-col rounded-md mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 absolute inset-0 md:flex-row gap-8 md:gap-16 items-center">
           {/* Hero title and PortableText */}
-          <div className="flex-1">
-            <h1 className=" hidden md:flex text-4xl md:mt-0 mt-20 text-center md:text-left font-semibold tracking-tight text-primary-950 sm:text-5xl lg:text-6xl">
+          <div className="flex-1 ">
+          <h1 className="hidden  md:flex text-4xl gradient-text md:mt-0 mt-20 text-center md:text-left font-semibold tracking-tight sm:text-5xl lg:text-6xl">
               {data.title}
             </h1>
-            <div className=" hidden md:flex mt-4 text-lg text-gray-300 sm:text-xl">
+            <div className=" hidden subtitle-gradient-text md:flex mt-4 text-lg  sm:text-xl">
               <PortableText value={data.content} />
             </div>
             <Cal
