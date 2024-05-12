@@ -16,16 +16,16 @@ export const metadata = {
     title: 'Transcend Mind & Body',
     description:
       'Witness the power of your mind and body with Transcend Mind & Body.',
-    url: 'https://trans-hypno.vercel.app',
+    url: 'https://transcendmindandbody.com/',
     siteName: 'Transcend Mind & Body',
     images: [
       {
-        url: 'https://trans-hypno.vercel.app/logo_no-bg.png',
+        url: 'https://transcendmindandbody.com/logo_no-bg.png',
         width: 800,
         height: 600,
       },
       {
-        url: 'https://trans-hypno.vercel.app/logo_no-bg.png',
+        url: 'https://transcendmindandbody.com/logo_no-bg.png',
         width: 1800,
         height: 1600,
         alt: 'Transcend Mind & Body',
