@@ -180,3 +180,28 @@ export const bannerQuery = groq`*[_type == "banner"]{
     url
 
 }`;
+
+
+export type Step = {
+  stepTitle: any;
+  stepDescription: any;
+  _key: string;
+};
+
+export type GetStartedType = {
+  title: string;
+  description: any; // Portable Text type
+  steps: Step[];
+  _id: string;
+  _rev: string;
+};
+
+export const getStartedQuery = groq`*[_type == "getStarted"]{
+    title,
+    description,
+    steps[] {
+      _key,
+      stepTitle,
+      stepDescription
+    }
+}`;
