@@ -11,7 +11,6 @@ import aboutUsPage from "./schemas/aboutUsPage";
 import post from "./schemas/post";
 import category from "./schemas/category";
 import getStarted from "./schemas/getStarted";
-import libraryPage from "./schemas/libraryPage";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -26,6 +25,5 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     category,
     aboutUsPage,
     pageContent,
-    libraryPage
   ],
 };

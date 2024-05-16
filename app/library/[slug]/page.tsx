@@ -6,7 +6,7 @@ import { client } from '@/sanity/lib/client';
 import { revalidateTag } from 'next/cache';
 import { Metadata } from 'next';
 
-export const revalidate = 10;
+export const revalidate = 1;
 
 export async function generateMetadata({ params }: { params: any }) {
   const post = await sanityFetch<SanityDocument>({ query: postQuery, params });
