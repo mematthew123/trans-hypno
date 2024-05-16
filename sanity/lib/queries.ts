@@ -4,11 +4,9 @@ import { SanityClient, groq } from 'next-sanity';
 import { PortableTextBlock, ImageAsset } from 'sanity';
 
 // Get all posts optionally filtered by category
-export const postsQuery = groq`
-  *[_type == "post" && defined(slug.current) && ($categoryId == null || $categoryId in categories[]._ref)]{
-    _id, title, slug, mainImage, publishedAt, excerpt, recording, categories
+export const postsQuery = groq`*[_type == "post" && defined(slug.current)]{
+    _id, title, slug, mainImage, publishedAt, excerpt,
   }`;
-
   
 
 // Get a single post by its slug
