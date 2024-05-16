@@ -1,14 +1,11 @@
 import React from "react";
 import {
-  HandRaisedIcon,
-  PencilIcon,
   PhoneIcon,
   PuzzlePieceIcon,
 } from "@heroicons/react/20/solid";
 import Cal from "./Cal";
-import { GetStartedType, getStartedQuery, Step } from "@/sanity/lib/queries";
+import { GetStartedType, getStartedQuery } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
-import { PortableText } from "@portabletext/react";
 
 export default async function GetStartedComponent() {
   const getStarted: GetStartedType[] = await client.fetch(getStartedQuery);

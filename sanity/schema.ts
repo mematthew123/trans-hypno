@@ -1,21 +1,17 @@
 import { type SchemaTypeDefinition } from "sanity";
 
 import blockContent from "./schemas/blockContent";
-import benefits from "./schemas/benefits";
 import faqs from "./schemas/faqs";
 import pageContent from "./schemas/pageContent";
 import aboutUs from "./schemas/aboutUs";
 import education from "./schemas/education";
 import reviews from "./schemas/reviews";
 import steps from "./schemas/steps";
-import hero from "./schemas/hero";
 import aboutUsPage from "./schemas/aboutUsPage";
-import header from "./schemas/header";
-import banner from "./schemas/banner";
 import post from "./schemas/post";
 import category from "./schemas/category";
-import { get } from "http";
 import getStarted from "./schemas/getStarted";
+import libraryPage from "./schemas/libraryPage";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -30,5 +26,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     category,
     aboutUsPage,
     pageContent,
+    libraryPage
   ],
 };

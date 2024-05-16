@@ -15,7 +15,7 @@ export default function Posts({ posts = [] }: { posts: SanityDocument[] }) {
               {post.title}
             </h2>
             <div className="space-y-2">
-              <p className="text-base text-primary-950/70  sm:text-lg">
+              <p className="text-base text-primary-950/70  sm:text-lg line-clamp-2">
                 {post.excerpt}
               </p>
               <Image

@@ -205,3 +205,18 @@ export const getStartedQuery = groq`*[_type == "getStarted"]{
       stepDescription
     }
 }`;
+
+export type LibraryPage = {
+  title: string;
+  image: ImageAsset;
+  content: PortableTextBlock[];
+  _id: string;
+  _rev: string;
+};
+
+export const libraryPageQuery = groq`*[_type == "libraryPage"]{
+    title,
+    image,
+    content
+}`;
+
