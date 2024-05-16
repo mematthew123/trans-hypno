@@ -9,7 +9,6 @@ import Posts from "@/components/Posts";
 import { useEffect, useState } from "react";
 import CategorySelector from "@/components/CategorySelector";
 
-export const revalidate = 10;
 
 type Post = {
   mainImage: {

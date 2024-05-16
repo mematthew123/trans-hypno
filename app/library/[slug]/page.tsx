@@ -25,8 +25,9 @@ export async function generateMetadata({ params }: { params: any }) {
 export async function generateStaticParams() {
   // Important, use the plain Sanity Client here
   const posts = await client.fetch(postPathsQuery);
-  revalidateTag(posts);
+  console.log(posts)
 
+  revalidateTag(posts);
   return posts;
 }
 

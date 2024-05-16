@@ -8,7 +8,6 @@ import { client } from "@/sanity/lib/client";
 import ImageComponent from "@/components/ImageComponent";
 
 
-export const revalidate = 1;
 
 const builder = imageUrlBuilder(client);
 

@@ -3,15 +3,16 @@
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
-    domains: [
-      'localhost',
-      'cdn.sanity.io',
-      'csimg.nyc3.cdn.digitaloceanspaces.com',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+        pathname: '/images/**',
+      },
     ],
   },
-  experimental: {
-    serverActions: true,
-  },
+  
 };
 
 module.exports = nextConfig;
