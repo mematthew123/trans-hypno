@@ -46,6 +46,11 @@ type Post = {
     current: string;
   };
   _id: string;
+  recording: {
+    asset: {
+      _ref: string;
+    };
+  };
 };
 
 export default function Post({ post }: { post: SanityDocument }) {

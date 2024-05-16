@@ -3,22 +3,24 @@ import Post from '@/components/Post';
 import { postPathsQuery, postQuery } from '@/sanity/lib/queries';
 import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import { client } from '@/sanity/lib/client';
-import { revalidateTag } from 'next/cache';
-import { Metadata } from 'next';
+import { Metadata, ResolvingMetadata } from 'next';
+import { toPlainText } from '@portabletext/react';
 
 export const revalidate = 1;
 
-export async function generateMetadata({ params }: { params: any }) {
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await sanityFetch<SanityDocument>({ query: postQuery, params });
-  revalidateTag(post && post._updatedAt);
+  const title = post?.title;
+  const description = post?.description || toPlainText(post?.body);
 
   return {
-    title: post.title,
-    description: post.description,
-    image: post.mainImage,
-    type: 'article',
-    date: post._updatedAt,
-  } as Metadata;
+    title,
+    description,
+  };
 }
 // Prepare Next.js to know which routes already exist
 export async function generateStaticParams() {

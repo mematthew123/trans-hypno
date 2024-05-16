@@ -3,21 +3,20 @@
 import { SanityClient, groq } from 'next-sanity';
 import { PortableTextBlock, ImageAsset } from 'sanity';
 
-// Get all posts optionally filtered by category
+// Get all posts
 export const postsQuery = groq`*[_type == "post" && defined(slug.current)]{
-    _id, title, slug, mainImage, publishedAt, excerpt,
-  }`;
-  
+  _id, title, slug, mainImage, publishedAt, excerpt,
+}`;
 
 // Get a single post by its slug
 export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{ 
-    title, mainImage, body, publishedAt, recording, slug, excerpt
-  }`;
+  title, mainImage, body,recording
+}`;
 
 // Get all post slugs
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
-    "params": { "slug": slug.current }
-  }`;
+  "params": { "slug": slug.current }
+}`;
 
 // Get all categories
 export const categoriesQuery = groq`*[_type == "category"]{
