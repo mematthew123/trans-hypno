@@ -5,9 +5,16 @@ import Link from 'next/link';
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
 import { AboutUsPage, aboutUsPageQuery } from '@/sanity/lib/queries';
 import { client } from '@/sanity/lib/client';
-import { PortableText } from '@portabletext/react';
+import { PortableText, PortableTextComponents } from '@portabletext/react';
 import { urlForImage } from '@/sanity/lib/image';
 import Image from 'next/image';
+
+const components: PortableTextComponents = {
+  block: {
+    // Default block renderer (for paragraphs, etc.)
+    normal: ({ children }) => <p className='text-xl mb-4'>{children}</p>,
+  },
+};
 
 export default async function ContentComponent() {
   const data = await client.fetch(aboutUsPageQuery);
@@ -87,7 +94,7 @@ export default async function ContentComponent() {
               <div className='mt-8 lg:mt-0'>
                 <div className='mx-auto max-w-prose text-base lg:max-w-none'>
                   <div className='text-xl '>
-                    <PortableText value={aboutUsPage.content} />
+                    <PortableText value={aboutUsPage.content} components={components} />
                   </div>
                 </div>
               </div>

@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <>
       <html lang='en'>
-        <body className='bg-primary-50 text-primary-950 antialiased transition  '>
+        <body className='bg-primary-50 text-primary-950 max-w-7xl px-4 sm:px-6 lg:px-8  mx-auto'>
           <Analytics />
           <HeaderComponent />
           {children}

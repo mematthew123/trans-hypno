@@ -15,7 +15,7 @@ export default function Page() {
       <PageHeader
         title={'Contact'}
         description={
-          'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui'
+          'Hypnotherapy in Missoula, Montana. Contact us to schedule a session.'
         }
         image='/flowers.jpg'
       />{' '}

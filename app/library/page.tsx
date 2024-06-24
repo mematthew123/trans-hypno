@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import CategorySelector from "@/components/CategorySelector";
 
 
+
 type Post = {
   mainImage: {
     asset: {
@@ -32,7 +33,7 @@ type Post = {
 
 export default function PostsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [posts, setPosts] = useState<Post[] | null>(null);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {

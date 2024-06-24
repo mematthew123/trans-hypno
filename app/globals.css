@@ -73,7 +73,6 @@ html {
   --subTitle: #6e3a88;
   --subTitleLight: #537ca4;
 }
-
 @keyframes twinkle {
   0%,
   100% {
@@ -99,43 +98,13 @@ html {
     }
   }
 
-  @keyframes shooting-star2 {
-    0% {
-      transform: translateX(-10%) translateY(-50%) scale(0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(600px) translateY(-120px) scale(2);
-      opacity: 0;
-    }
-  }
-
-  .shooting-star2 {
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    width: 2px;
-    height: 2px;
-    background: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    animation: shooting-star2 3s linear infinite;
-    animation-delay: 3s; /* Delay the start of the animation */
-  }
-
   .shooting-star {
     position: absolute;
-    top: 10%;
-    left: 10%;
     width: 2px;
     height: 2px;
     background: white;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    animation: shooting-star 3s linear infinite;
-    animation-delay: 3s; /* Delay the start of the animation */
+    animation: shooting-star 5s linear infinite;
   }
 }
